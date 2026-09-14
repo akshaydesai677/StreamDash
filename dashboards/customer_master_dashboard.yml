@@ -1,0 +1,87 @@
+id: "customer_master_analytics"
+title: "Customer Master Directory"
+description: "High-performance analytics on 25,000 customer accounts with demographic and acquisition cost insights."
+category: "Customer Intelligence"
+icon: "👥"
+sort_order: 3
+roles:
+  - "admin"
+  - "analyst"
+  - "viewer"
+
+data_source:
+  type: "csv"
+  path: "data/customer_master.csv"
+  use_pyarrow: true
+
+filters:
+  - id: "filter_cust_region"
+    column: "region"
+    type: "multiselect"
+    label: "Filter Region"
+    default: []
+  - id: "filter_cust_segment"
+    column: "customer_segment"
+    type: "selectbox"
+    label: "Customer Segment"
+    include_all: true
+  - id: "filter_cust_gender"
+    column: "gender"
+    type: "radio"
+    label: "Gender"
+    default: "All"
+
+metrics:
+  - label: "Total Customer Base"
+    column: "customer_id"
+    agg: "count"
+    format: "integer"
+    help: "Total registered customer accounts"
+  - label: "Average Customer Age"
+    column: "customer_age"
+    agg: "mean"
+    format: "float"
+    unit: " yrs"
+    help: "Average customer age across selected segment"
+  - label: "Average Acquisition Cost"
+    column: "customer_acquisition_cost"
+    agg: "mean"
+    format: "currency"
+    help: "Average cost to acquire customer"
+  - label: "Total Acquisition Spend"
+    column: "customer_acquisition_cost"
+    agg: "sum"
+    format: "currency"
+    help: "Total acquisition capital deployed"
+
+charts:
+  - id: "chart_cac_by_region"
+    title: "Customer Count by Region & Segment"
+    type: "bar"
+    x: "region"
+    y: "customer_id"
+    agg: "count"
+    color: "customer_segment"
+    barmode: "group"
+    col_width: 7
+
+  - id: "chart_segment_donut"
+    title: "Customer Segment Breakdown"
+    type: "pie"
+    values: "customer_acquisition_cost"
+    names: "customer_segment"
+    hole: 0.45
+    col_width: 5
+
+table:
+  show: true
+  title: "Customer Directory Records"
+  columns:
+    - "customer_id"
+    - "customer_name"
+    - "customer_age"
+    - "gender"
+    - "customer_segment"
+    - "customer_city"
+    - "region"
+    - "customer_acquisition_cost"

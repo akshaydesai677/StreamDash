@@ -1,0 +1,82 @@
+id: "bigquery_analytics"
+title: "GCP BigQuery Cloud Intelligence"
+description: "Serverless enterprise analytics and cloud cost intelligence powered by Google BigQuery."
+category: "Cloud Data Warehouse"
+icon: "🌐"
+sort_order: 7
+roles:
+  - "admin"
+  - "analyst"
+  - "viewer"
+
+# GCP BigQuery Data Adapter Configuration
+data_source:
+  type: "bigquery"
+  project: "my-gcp-project"
+  dataset: "analytics_data"
+  query: |
+    SELECT 
+      usage_id,
+      usage_date,
+      region,
+      service,
+      cost_center,
+      cost,
+      credit,
+      invocations
+    FROM `my-gcp-project.analytics_data.gcp_billing`
+  cache_ttl: 600
+  # Set mock: true for sandbox testing without live GCP credentials; set to false when connecting to live BigQuery
+  mock: true
+
+filters:
+  - id: "bq_region_filter"
+    column: "region"
+    type: "multiselect"
+    label: "Cloud Region"
+    default: []
+  - id: "bq_service_filter"
+    column: "service"
+    type: "selectbox"
+    label: "GCP Service"
+    include_all: true
+
+metrics:
+  - label: "Total Cloud Spend"
+    column: "cost"
+    agg: "sum"
+    format: "currency"
+    help: "Total infrastructure cost evaluated in BigQuery"
+  - label: "Promotional Credits"
+    column: "credit"
+    agg: "sum"
+    format: "currency"
+    help: "Partner credits applied"
+  - label: "API Invocations"
+    column: "invocations"
+    agg: "sum"
+    format: "integer"
+    help: "Total serverless API invocations"
+
+charts:
+  - id: "bq_chart_service_cost"
+    title: "Spend by GCP Service & Region"
+    type: "bar"
+    x: "service"
+    y: "cost"
+    agg: "sum"
+    color: "region"
+    barmode: "group"
+    col_width: 7
+
+  - id: "bq_chart_cost_center_donut"
+    title: "Cost Center Allocation"
+    type: "pie"
+    values: "cost"
+    names: "cost_center"
+    hole: 0.45
+    col_width: 5
+
+table:
+  show: true
+  title: "BigQuery Cloud Warehouse Telemetry"

@@ -54,24 +54,32 @@ A modern, enterprise-grade multipage Streamlit platform for building, visualizin
    - In-memory Streamlit caching (`@st.cache_data(ttl=600)`) prevents redundant cloud warehouse roundtrips.
    - Mock/sandbox mode for testing without live Snowflake credentials (`mock: true`).
 
-7. **Parquet Data Adapter (`adapters/parquet_adapter.py`)**:
+7. **GCP BigQuery Cloud Adapter (`adapters/bigquery_adapter.py`)**:
+   - Enterprise cloud data warehouse adapter using `google-cloud-bigquery`.
+   - Supports custom SQL queries or dataset table binding with PyArrow fast zero-copy deserialization.
+   - Multi-tier credential resolution: Service account JSON file/dict, Streamlit secrets (`st.secrets["gcp_service_account"]`), or Application Default Credentials (ADC).
+   - Zero-row `LIMIT 0` schema introspection prevents billable byte scans.
+   - In-memory Streamlit query caching (`@st.cache_data(ttl=600)`).
+   - Built-in mock sandbox mode for offline UI development.
+
+8. **Parquet Data Adapter (`adapters/parquet_adapter.py`)**:
    - High-performance columnar data adapter for Apache Parquet files.
    - Sub-50ms query speeds on large datasets with zero text-parsing CPU overhead.
    - Column projection pruning (`columns: [...]`) to only load required metrics and dimensions into RAM.
    - Zero-copy schema introspection directly from Parquet file metadata.
 
-8. **DuckDB Vectorized SQL Adapter (`adapters/duckdb_adapter.py`)**:
+9. **DuckDB Vectorized SQL Adapter (`adapters/duckdb_adapter.py`)**:
    - Vectorized, out-of-core SQL engine for querying massive datasets larger than server RAM.
    - Queries Parquet, CSV, and JSON directly on disk without full in-memory loading (`SELECT ... FROM 'data.parquet'`).
    - Supports embedded/persistent `.duckdb` databases or transient in-memory analytics.
    - Pushdown filtering and multi-threaded analytical aggregations.
 
-9. **PyArrow SIMD CSV Optimization (`adapters/csv_adapter.py`)**:
+10. **PyArrow SIMD CSV Optimization (`adapters/csv_adapter.py`)**:
    - Automatic PyArrow SIMD parsing engine delivering 8x–19x faster cold loads over standard CSV parsers.
    - Instant zero-copy schema introspection using `nrows=0`.
    - Column pruning (`usecols`) support to minimize memory footprint.
 
-10. **Authentication & RBAC (`core/auth.py`, `config/access_control.yml`)**:
+11. **Authentication & RBAC (`core/auth.py`, `config/access_control.yml`)**:
    - Credentials login protecting all application views.
    - Role-based permissions controlling dashboard access for `admin`, `analyst`, and `viewer`.
    - Default credentials:
@@ -79,16 +87,15 @@ A modern, enterprise-grade multipage Streamlit platform for building, visualizin
      - **Analyst**: `analyst` / `analyst123` (Access to Sales & Operations, visual builder)
      - **Viewer**: `viewer` / `viewer123` (Read-only access to Sales Overview)
 
-11. **Interactive YAML Playground (`views/playground.py`)**:
+12. **Interactive YAML Playground (`views/playground.py`)**:
    - Live code editor with real-time YAML syntax & schema validation.
    - One-click template loader, embedded dataset inspector, and live side-by-side preview.
 
-12. **Dashboard Gallery Portal (`views/home.py`)**:
+13. **Dashboard Gallery Portal (`views/home.py`)**:
    - Homepage presenting window preview cards for authorized dashboards.
    - Live search bar and category filtering.
 
 ---
-
 
 ## 📁 Project Structure
 
@@ -107,7 +114,8 @@ Streamdash/
 │   ├── csv_adapter.py          # PyArrow-accelerated CSV adapter
 │   ├── parquet_adapter.py      # Columnar Apache Parquet adapter
 │   ├── duckdb_adapter.py       # Vectorized DuckDB SQL engine adapter
-│   └── snowflake_adapter.py    # Snowflake Cloud Warehouse adapter
+│   ├── snowflake_adapter.py    # Snowflake Cloud Warehouse adapter
+│   └── bigquery_adapter.py     # GCP BigQuery Cloud Warehouse adapter
 ├── core/
 │   ├── auth.py                 # Authentication & RBAC engine
 │   ├── dashboard_loader.py     # YAML scanner and parser
@@ -137,9 +145,12 @@ Streamdash/
 │   ├── sales_overview.yml      # Sales & Revenue dashboard
 │   ├── operations_kpi.yml      # Logistics & Operations dashboard
 │   ├── customer_insights.yml   # Customer Retention & MRR dashboard
+│   ├── customer_master_dashboard.yml # 25k Customer master analytics
 │   ├── snowflake_analytics.yml # Snowflake Enterprise Analytics
+│   ├── bigquery_analytics.yml  # GCP BigQuery Cloud Intelligence
 │   ├── parquet_analytics.yml   # Parquet Big Data Hub
 │   └── duckdb_analytics.yml    # DuckDB Vectorized Analytics
+
 ├── data/
 │   ├── sales_data.csv          # Sample sales transactions
 │   ├── sales_data.parquet      # Compressed columnar sales transactions

@@ -184,7 +184,40 @@ data_source:
   query: "SELECT * FROM my_table"
 ```
 
+### Connecting to Google Cloud Platform BigQuery
+Streamdash provides a native GCP BigQuery adapter using `google-cloud-bigquery` and PyArrow.
+
+#### Option A: In Dashboard YAML (`dashboards/my_bigquery_dashboard.yml`)
+```yaml
+data_source:
+  type: "bigquery"
+  project: "my-gcp-project-id"
+  credentials_path: "config/gcp_service_account.json"  # Or use GOOGLE_APPLICATION_CREDENTIALS
+  query: |
+    SELECT customer_id, region, revenue, created_at
+    FROM `my-gcp-project-id.analytics.orders`
+    WHERE created_at >= TIMESTAMP_SUB(CURRENT_TIMESTAMP(), INTERVAL 30 DAY)
+  cache_ttl: 600
+```
+
+#### Option B: Via Streamlit Secrets (`.streamlit/secrets.toml`)
+```toml
+[gcp_service_account]
+type = "service_account"
+project_id = "my-gcp-project-id"
+private_key_id = "..."
+private_key = "-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY-----\n"
+client_email = "sa@my-gcp-project-id.iam.gserviceaccount.com"
+```
+When configured in `secrets.toml`, your dashboard YAML only needs:
+```yaml
+data_source:
+  type: "bigquery"
+  query: "SELECT * FROM `my-gcp-project-id.analytics.orders`"
+```
+
 ### High-Performance Columnar Analytics (Apache Parquet)
+
 For datasets with hundreds of thousands or millions of records, use `type: parquet`:
 ```yaml
 data_source:

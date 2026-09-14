@@ -375,9 +375,48 @@ class TestStreamdashCore(unittest.TestCase):
         self.assertIn("Sales_Rep", cols)
         self.assertIn("Revenue", cols)
 
+    def test_17_bigquery_data_adapter(self):
+        from adapters.bigquery_adapter import BigQueryDataAdapter
+        from core.renderer import get_data_adapter, DashboardRenderer
+
+        # 1. Test Registry lookup
+        adapter1 = get_data_adapter("bigquery")
+        adapter2 = get_data_adapter("gcp_bigquery")
+        self.assertIsInstance(adapter1, BigQueryDataAdapter)
+        self.assertIsInstance(adapter2, BigQueryDataAdapter)
+
+        # 2. Test Query builder
+        config_table = {"table": "project.dataset.table", "limit": 50}
+        q = adapter1._build_query(config_table)
+        self.assertEqual(q, "SELECT * FROM `project.dataset.table` LIMIT 50")
+
+        config_query = {"query": "SELECT id, amount FROM `sales`"}
+        q2 = adapter1._build_query(config_query)
+        self.assertEqual(q2, "SELECT id, amount FROM `sales`")
+
+        # 3. Test Mock Data load
+        mock_config = {"type": "bigquery", "mock": True}
+        df = adapter1.load_data(mock_config)
+        self.assertFalse(df.empty)
+        self.assertIn("cost", df.columns)
+        self.assertIn("service", df.columns)
+        self.assertIn("region", df.columns)
+
+        # 4. Test Column Introspection
+        cols = adapter1.get_columns(mock_config)
+        self.assertIn("cost", cols)
+        self.assertIn("service", cols)
+
+        # 5. Test Dashboard YAML renderer
+        dash_config = self.dashboard_loader.get_dashboard("bigquery_analytics")
+        self.assertIsNotNone(dash_config)
+        self.assertEqual(dash_config["data_source"]["type"], "bigquery")
+        renderer = DashboardRenderer(dash_config)
+        self.assertIsInstance(renderer.adapter, BigQueryDataAdapter)
 
 
 if __name__ == "__main__":
     unittest.main()
+
 
 
