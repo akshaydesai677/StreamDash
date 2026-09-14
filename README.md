@@ -2,6 +2,8 @@
 
 A modern, enterprise-grade multipage Streamlit platform for building, visualizing, and running declarative YAML-driven dashboards with CSV data adapters, authentication gating, role-based access control (RBAC), an interactive visual canvas builder, and an interactive dashboard gallery.
 
+> 📖 **Quick Start**: For complete installation and setup instructions, see [SETUP.md](SETUP.md).
+
 ---
 
 ## 🚀 Key Features
