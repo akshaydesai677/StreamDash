@@ -6,12 +6,17 @@ import streamlit as st
 
 from adapters.csv_adapter import CSVDataAdapter
 from adapters.snowflake_adapter import SnowflakeDataAdapter
+from adapters.parquet_adapter import ParquetDataAdapter
+from adapters.duckdb_adapter import DuckDBDataAdapter
 
 # Adapter registry
 ADAPTER_MAP = {
     "csv": CSVDataAdapter,
     "snowflake": SnowflakeDataAdapter,
+    "parquet": ParquetDataAdapter,
+    "duckdb": DuckDBDataAdapter,
 }
+
 
 PALETTES = {
     "streamdash": ["#4f46e5", "#06b6d4", "#10b981", "#f59e0b", "#ef4444", "#8b5cf6", "#ec4899"],

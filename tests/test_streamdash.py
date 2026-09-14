@@ -268,6 +268,114 @@ class TestStreamdashCore(unittest.TestCase):
         renderer = DashboardRenderer(dash_config)
         self.assertIsInstance(renderer.adapter, SnowflakeDataAdapter)
 
+    def test_14_parquet_data_adapter(self):
+        from adapters.parquet_adapter import ParquetDataAdapter
+        from core.renderer import get_data_adapter, DashboardRenderer
+
+        # 1. Test Registry lookup
+        adapter = get_data_adapter("parquet")
+        self.assertIsInstance(adapter, ParquetDataAdapter)
+
+        # 2. Test Columnar Load
+        config = {
+            "type": "parquet",
+            "path": "data/sales_data.parquet",
+        }
+        df = adapter.load_data(config)
+        self.assertFalse(df.empty)
+        self.assertIn("Revenue", df.columns)
+        self.assertIn("Region", df.columns)
+
+        # 3. Test Column Pruning (projection pushdown)
+        pruned_config = {
+            "type": "parquet",
+            "path": "data/sales_data.parquet",
+            "columns": ["Region", "Revenue"],
+        }
+        df_pruned = adapter.load_data(pruned_config)
+        self.assertEqual(list(df_pruned.columns), ["Region", "Revenue"])
+
+        # 4. Test Limit
+        limit_config = {
+            "type": "parquet",
+            "path": "data/sales_data.parquet",
+            "limit": 15,
+        }
+        df_limited = adapter.load_data(limit_config)
+        self.assertEqual(len(df_limited), 15)
+
+        # 5. Test Zero-Copy Schema Introspection
+        cols = adapter.get_columns(config)
+        self.assertIn("Revenue", cols)
+        self.assertIn("Product_Category", cols)
+
+        # 6. Test Dashboard YAML renderer
+        dash_config = self.dashboard_loader.get_dashboard("parquet_analytics")
+        self.assertIsNotNone(dash_config)
+        self.assertEqual(dash_config["data_source"]["type"], "parquet")
+        renderer = DashboardRenderer(dash_config)
+        self.assertIsInstance(renderer.adapter, ParquetDataAdapter)
+
+    def test_15_duckdb_data_adapter(self):
+        from adapters.duckdb_adapter import DuckDBDataAdapter
+        from core.renderer import get_data_adapter, DashboardRenderer
+
+        # 1. Test Registry lookup
+        adapter = get_data_adapter("duckdb")
+        self.assertIsInstance(adapter, DuckDBDataAdapter)
+
+        # 2. Test In-Memory SQL Execution
+        sql_config = {
+            "type": "duckdb",
+            "database": ":memory:",
+            "query": "SELECT 101 AS user_id, 'Enterprise' AS tier, 999.50 AS amount",
+        }
+        df = adapter.load_data(sql_config)
+        self.assertEqual(len(df), 1)
+        self.assertEqual(df["amount"].iloc[0], 999.50)
+        self.assertEqual(df["tier"].iloc[0], "Enterprise")
+
+        # 3. Test Direct Parquet SQL scan via DuckDB
+        file_sql_config = {
+            "type": "duckdb",
+            "database": ":memory:",
+            "query": "SELECT Region, SUM(Revenue) AS total_rev FROM read_parquet('data/sales_data.parquet') GROUP BY Region",
+        }
+        df_scan = adapter.load_data(file_sql_config)
+        self.assertFalse(df_scan.empty)
+        self.assertIn("Region", df_scan.columns)
+        self.assertIn("total_rev", df_scan.columns)
+
+        # 4. Test Schema Introspection
+        cols = adapter.get_columns(sql_config)
+        self.assertEqual(cols, ["user_id", "tier", "amount"])
+
+        # 5. Test Dashboard YAML renderer
+        dash_config = self.dashboard_loader.get_dashboard("duckdb_analytics")
+        self.assertIsNotNone(dash_config)
+        self.assertEqual(dash_config["data_source"]["type"], "duckdb")
+        renderer = DashboardRenderer(dash_config)
+        self.assertIsInstance(renderer.adapter, DuckDBDataAdapter)
+
+    def test_16_csv_pyarrow_optimization(self):
+        from adapters.csv_adapter import CSVDataAdapter
+
+        adapter = CSVDataAdapter()
+        config = {
+            "type": "csv",
+            "path": "data/sales_data.csv",
+            "columns": ["Region", "Revenue"],
+            "use_pyarrow": True,
+        }
+        df = adapter.load_data(config)
+        self.assertEqual(list(df.columns), ["Region", "Revenue"])
+
+        # Test zero-copy column introspection
+        cols = adapter.get_columns({"path": "data/sales_data.csv"})
+        self.assertIn("Sales_Rep", cols)
+        self.assertIn("Revenue", cols)
+
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -1,0 +1,78 @@
+id: "duckdb_analytics"
+title: "DuckDB Vectorized Analytics"
+description: "Zero-copy, out-of-core vectorized SQL queries running directly on files via DuckDB engine."
+category: "Vectorized Engine"
+icon: "🦆"
+sort_order: 6
+roles:
+  - "admin"
+  - "analyst"
+  - "viewer"
+
+# DuckDB Data Adapter Configuration
+data_source:
+  type: "duckdb"
+  database: ":memory:"
+  query: |
+    SELECT 
+      Date,
+      Region,
+      Product_Category,
+      Sales_Rep,
+      Revenue,
+      Units_Sold,
+      Profit_Margin
+    FROM read_parquet('data/sales_data.parquet')
+
+filters:
+  - id: "duckdb_category_filter"
+    column: "Product_Category"
+    type: "multiselect"
+    label: "Product Category"
+    default: []
+  - id: "duckdb_region_filter"
+    column: "Region"
+    type: "selectbox"
+    label: "Territory"
+    include_all: true
+
+metrics:
+  - label: "Vectorized Revenue"
+    column: "Revenue"
+    agg: "sum"
+    format: "currency"
+    help: "Total revenue aggregated via DuckDB engine"
+  - label: "Average Profit Margin"
+    column: "Profit_Margin"
+    agg: "mean"
+    format: "percent"
+    help: "Average profitability margin"
+  - label: "Total Transactions"
+    column: "Sales_Rep"
+    agg: "count"
+    format: "integer"
+    help: "Total order records evaluated by DuckDB"
+
+charts:
+  - id: "duckdb_chart_category_rev"
+    title: "Revenue by Product Category"
+    type: "bar"
+    x: "Product_Category"
+    y: "Revenue"
+    agg: "sum"
+    color: "Region"
+    barmode: "group"
+    col_width: 7
+
+
+  - id: "duckdb_chart_region_donut"
+    title: "Regional Market Share"
+    type: "pie"
+    values: "Revenue"
+    names: "Region"
+    hole: 0.45
+    col_width: 5
+
+table:
+  show: true
+  title: "DuckDB Vectorized SQL Output"

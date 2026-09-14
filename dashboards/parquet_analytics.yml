@@ -1,0 +1,76 @@
+id: "parquet_analytics"
+title: "Parquet Big Data Hub"
+description: "Ultra-fast columnar analytics powered by Apache Parquet and SIMD Arrow reads."
+category: "Big Data & Columns"
+icon: "⚡"
+sort_order: 5
+roles:
+  - "admin"
+  - "analyst"
+  - "viewer"
+
+# Parquet Data Adapter Configuration
+data_source:
+  type: "parquet"
+  path: "data/sales_data.parquet"
+  columns:
+    - "Date"
+    - "Region"
+    - "Product_Category"
+    - "Sales_Rep"
+    - "Revenue"
+    - "Units_Sold"
+    - "Profit_Margin"
+
+filters:
+  - id: "parquet_region_filter"
+    column: "Region"
+    type: "multiselect"
+    label: "Sales Region"
+    default: []
+  - id: "parquet_category_filter"
+    column: "Product_Category"
+    type: "selectbox"
+    label: "Product Category"
+    include_all: true
+
+metrics:
+  - label: "Parquet Gross Revenue"
+    column: "Revenue"
+    agg: "sum"
+    format: "currency"
+    help: "Total sales revenue loaded from compressed Parquet column store"
+  - label: "Total Units Dispatched"
+    column: "Units_Sold"
+    agg: "sum"
+    format: "integer"
+    help: "Total units aggregated across all regions"
+  - label: "Average Profit Margin"
+    column: "Profit_Margin"
+    agg: "mean"
+    format: "percent"
+    help: "Average profitability margin"
+
+charts:
+  - id: "parquet_chart_rev_category"
+    title: "Revenue by Product Category & Region"
+    type: "bar"
+    x: "Product_Category"
+    y: "Revenue"
+    agg: "sum"
+    color: "Region"
+    barmode: "group"
+    col_width: 7
+
+  - id: "parquet_chart_region_donut"
+    title: "Regional Sales Distribution"
+    type: "pie"
+    values: "Revenue"
+    names: "Region"
+    hole: 0.4
+    col_width: 5
+
+
+table:
+  show: true
+  title: "Columnar Parquet Records"
