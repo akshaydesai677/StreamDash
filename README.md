@@ -198,5 +198,12 @@ Open **`http://localhost:8501`** in your browser.
 
 ---
 
+## 🗺️ Product Roadmap & Enterprise Architecture
+* **[Product & Engineering Roadmap](ROADMAP.md)**: 11 strategic engineering initiatives including Azure AD OAuth, YData dataset research profiling, recommendation engines, RBAC/RLS, map charts, contracts, alerting, and anomaly detection.
+* **[Enterprise Architecture Guide](docs/ENTERPRISE_ARCHITECTURE.md)**: Production scale-out blueprint for 100+ concurrent active users and 1,000+ dashboards across Azure+Snowflake, Pure Azure, GCP, AWS, and Open Source.
+
+---
+
 ## 👤 Author
 **Akshay Desai** - [akshaydesai677@gmail.com](mailto:akshaydesai677@gmail.com)
+
