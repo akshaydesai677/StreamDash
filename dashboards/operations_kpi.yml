@@ -1,0 +1,105 @@
+id: "operations_kpi"
+title: "Operations & Supply Chain"
+description: "Warehouse fulfillment velocity, delivery statuses, shipping modes, and SLA ratings."
+category: "Logistics & Ops"
+icon: "📦"
+sort_order: 2
+roles:
+  - "admin"
+  - "analyst"
+
+data_source:
+  type: "csv"
+  path: "data/operations_data.csv"
+  date_columns:
+    - "Order_Date"
+
+filters:
+  - id: "warehouse_filter"
+    column: "Warehouse"
+    type: "multiselect"
+    label: "Fulfillment Warehouses"
+    default: []
+  - id: "status_filter"
+    column: "Delivery_Status"
+    type: "multiselect"
+    label: "Delivery Status"
+    default: []
+  - id: "mode_filter"
+    column: "Shipping_Mode"
+    type: "selectbox"
+    label: "Shipping Mode"
+    include_all: true
+
+metrics:
+  - label: "Total Orders"
+    column: "Order_ID"
+    agg: "count"
+    format: "integer"
+    help: "Total logistics shipments in record"
+  - label: "Avg Fulfillment Time"
+    column: "Fulfillment_Time_Days"
+    agg: "mean"
+    format: "float"
+    unit: " days"
+    help: "Mean turnaround days from order placement to doorstep"
+  - label: "Avg Customer Rating"
+    column: "Customer_Rating"
+    agg: "mean"
+    format: "float"
+    unit: " / 5.0"
+    help: "Delivery satisfaction score"
+  - label: "Total Freight Cost"
+    column: "Shipping_Cost"
+    agg: "sum"
+    format: "currency"
+    help: "Total carrier and transit expenses incurred"
+
+charts:
+  - id: "chart_status_counts"
+    title: "Order Fulfillment Status Breakdown"
+    type: "bar"
+    x: "Delivery_Status"
+    y: "Order_ID"
+    agg: "count"
+    color: "Delivery_Status"
+    col_width: 6
+
+  - id: "chart_warehouse_volume"
+    title: "Volume by Warehouse & Shipping Mode"
+    type: "bar"
+    x: "Warehouse"
+    y: "Order_ID"
+    agg: "count"
+    color: "Shipping_Mode"
+    barmode: "stack"
+    col_width: 6
+
+  - id: "chart_lead_times"
+    title: "Turnaround Days by Shipping Method"
+    type: "box"
+    x: "Shipping_Mode"
+    y: "Fulfillment_Time_Days"
+    color: "Shipping_Mode"
+    col_width: 7
+
+  - id: "chart_cost_by_mode"
+    title: "Transit Cost Share by Mode"
+    type: "pie"
+    values: "Shipping_Cost"
+    names: "Shipping_Mode"
+    hole: 0.35
+    col_width: 5
+
+table:
+  show: true
+  title: "Shipment Tracking Details"
+  columns:
+    - "Order_ID"
+    - "Order_Date"
+    - "Warehouse"
+    - "Shipping_Mode"
+    - "Delivery_Status"
+    - "Fulfillment_Time_Days"
+    - "Customer_Rating"
+    - "Shipping_Cost"

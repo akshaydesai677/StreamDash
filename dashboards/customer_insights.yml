@@ -1,0 +1,102 @@
+id: "customer_insights"
+title: "Customer Insights & Retention"
+description: "Customer segment breakdown, monthly spend distributions, churn analysis, and NPS sentiment."
+category: "Customer Success"
+icon: "👥"
+sort_order: 3
+roles:
+  - "admin"
+
+data_source:
+  type: "csv"
+  path: "data/customer_data.csv"
+  date_columns:
+    - "Signup_Date"
+
+filters:
+  - id: "segment_filter"
+    column: "Segment"
+    type: "multiselect"
+    label: "Customer Segment"
+    default: []
+  - id: "plan_filter"
+    column: "Plan"
+    type: "multiselect"
+    label: "Subscription Plan"
+    default: []
+  - id: "churn_filter"
+    column: "Churn_Status"
+    type: "selectbox"
+    label: "Account Health Status"
+    include_all: true
+
+metrics:
+  - label: "Total Customer Base"
+    column: "Customer_ID"
+    agg: "count"
+    format: "integer"
+    help: "Total accounts registered"
+  - label: "Total MRR"
+    column: "Monthly_Spend"
+    agg: "sum"
+    format: "currency"
+    help: "Monthly Recurring Revenue generated across accounts"
+  - label: "Average NPS Score"
+    column: "NPS_Score"
+    agg: "mean"
+    format: "float"
+    unit: " / 10"
+    help: "Net Promoter Score satisfaction index"
+  - label: "Avg Support Tickets"
+    column: "Support_Tickets"
+    agg: "mean"
+    format: "float"
+    help: "Average open customer support tickets per account"
+
+charts:
+  - id: "chart_segment_spend"
+    title: "MRR Contribution by Segment & Plan"
+    type: "bar"
+    x: "Segment"
+    y: "Monthly_Spend"
+    agg: "sum"
+    color: "Plan"
+    barmode: "group"
+    col_width: 7
+
+  - id: "chart_churn_distribution"
+    title: "Customer Retention Health"
+    type: "pie"
+    values: "Customer_ID"
+    names: "Churn_Status"
+    hole: 0.45
+    col_width: 5
+
+  - id: "chart_nps_by_plan"
+    title: "NPS Sentiment Distribution by Plan"
+    type: "box"
+    x: "Plan"
+    y: "NPS_Score"
+    color: "Plan"
+    col_width: 6
+
+  - id: "chart_spend_vs_tickets"
+    title: "Monthly Spend vs Support Ticket Volume"
+    type: "scatter"
+    x: "Support_Tickets"
+    y: "Monthly_Spend"
+    color: "Churn_Status"
+    col_width: 6
+
+table:
+  show: true
+  title: "Customer Cohort Accounts"
+  columns:
+    - "Customer_ID"
+    - "Signup_Date"
+    - "Segment"
+    - "Plan"
+    - "Monthly_Spend"
+    - "NPS_Score"
+    - "Churn_Status"
+    - "Support_Tickets"

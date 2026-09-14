@@ -1,0 +1,401 @@
+Order_ID,Order_Date,Warehouse,Shipping_Mode,Delivery_Status,Fulfillment_Time_Days,Customer_Rating,Shipping_Cost
+ORD-2026-1000,2026-05-08,West Hub - Reno,Priority Freight,Delivered,7,5,149.82
+ORD-2026-1001,2026-04-07,Central Hub - Chicago,Same-Day Courier,Out for Delivery,5,5,182.64
+ORD-2026-1002,2026-06-27,EU Hub - Frankfurt,Express Air,In Transit,3,4,264.63
+ORD-2026-1003,2026-06-02,Central Hub - Chicago,Express Air,In Transit,3,5,205.74
+ORD-2026-1004,2026-05-25,EU Hub - Frankfurt,Priority Freight,Out for Delivery,5,5,54.09
+ORD-2026-1005,2026-02-26,West Hub - Reno,Same-Day Courier,Delivered,5,4,198.63
+ORD-2026-1006,2026-05-09,West Hub - Reno,Priority Freight,Out for Delivery,5,5,147.71
+ORD-2026-1007,2026-01-22,Central Hub - Chicago,Standard Ground,Delivered,4,5,86.03
+ORD-2026-1008,2026-05-04,East Hub - Newark,Same-Day Courier,Delivered,7,4,119.08
+ORD-2026-1009,2026-03-18,Central Hub - Chicago,Express Air,Delivered,3,4,224.76
+ORD-2026-1010,2026-02-12,West Hub - Reno,Standard Ground,Delivered,4,5,307.75
+ORD-2026-1011,2026-03-01,EU Hub - Frankfurt,Standard Ground,Delivered,7,5,33.61
+ORD-2026-1012,2026-06-07,West Hub - Reno,Same-Day Courier,Delivered,5,5,88.36
+ORD-2026-1013,2026-03-13,Central Hub - Chicago,Express Air,In Transit,2,5,83.14
+ORD-2026-1014,2026-01-30,East Hub - Newark,Same-Day Courier,Delivered,7,5,139.65
+ORD-2026-1015,2026-04-11,Central Hub - Chicago,Priority Freight,Delivered,5,4,265.05
+ORD-2026-1016,2026-06-30,East Hub - Newark,Express Air,Delivered,3,5,115.09
+ORD-2026-1017,2026-02-16,East Hub - Newark,Standard Ground,Delivered,5,5,194.57
+ORD-2026-1018,2026-04-19,West Hub - Reno,Same-Day Courier,Delivered,7,3,299.56
+ORD-2026-1019,2026-02-14,West Hub - Reno,Same-Day Courier,Delivered,3,5,158.05
+ORD-2026-1020,2026-01-14,East Hub - Newark,Express Air,Delivered,2,4,309.33
+ORD-2026-1021,2026-05-10,EU Hub - Frankfurt,Same-Day Courier,Delivered,5,4,155.94
+ORD-2026-1022,2026-02-12,Central Hub - Chicago,Express Air,In Transit,2,5,106.08
+ORD-2026-1023,2026-05-18,East Hub - Newark,Standard Ground,In Transit,6,4,250.95
+ORD-2026-1024,2026-05-21,Central Hub - Chicago,Express Air,Delivered,3,5,248.25
+ORD-2026-1025,2026-04-23,West Hub - Reno,Same-Day Courier,Delivered,8,4,98.02
+ORD-2026-1026,2026-01-09,EU Hub - Frankfurt,Priority Freight,Delivered,8,5,280.26
+ORD-2026-1027,2026-01-31,West Hub - Reno,Standard Ground,In Transit,6,4,279.01
+ORD-2026-1028,2026-06-06,EU Hub - Frankfurt,Standard Ground,Delivered,8,5,86.05
+ORD-2026-1029,2026-01-16,East Hub - Newark,Priority Freight,Delivered,3,5,232.7
+ORD-2026-1030,2026-03-16,East Hub - Newark,Express Air,Delivered,4,3,317.78
+ORD-2026-1031,2026-06-17,West Hub - Reno,Standard Ground,Delivered,7,5,98.03
+ORD-2026-1032,2026-06-23,EU Hub - Frankfurt,Same-Day Courier,Delivered,7,5,147.2
+ORD-2026-1033,2026-04-26,Central Hub - Chicago,Express Air,Delivered,3,4,283.81
+ORD-2026-1034,2026-04-27,EU Hub - Frankfurt,Priority Freight,Delivered,8,4,241.15
+ORD-2026-1035,2026-04-28,East Hub - Newark,Express Air,In Transit,4,5,151.74
+ORD-2026-1036,2026-02-24,EU Hub - Frankfurt,Priority Freight,Delivered,4,5,195.49
+ORD-2026-1037,2026-05-25,EU Hub - Frankfurt,Priority Freight,Delayed,11,5,209.72
+ORD-2026-1038,2026-04-28,Central Hub - Chicago,Express Air,Delayed,8,5,317.59
+ORD-2026-1039,2026-04-20,West Hub - Reno,Standard Ground,Delayed,8,3,283.6
+ORD-2026-1040,2026-01-24,East Hub - Newark,Priority Freight,Delivered,7,3,73.83
+ORD-2026-1041,2026-04-12,East Hub - Newark,Standard Ground,Delivered,2,4,25.32
+ORD-2026-1042,2026-05-03,Central Hub - Chicago,Standard Ground,Delivered,6,4,27.74
+ORD-2026-1043,2026-06-28,East Hub - Newark,Express Air,Out for Delivery,4,4,165.92
+ORD-2026-1044,2026-02-28,EU Hub - Frankfurt,Express Air,In Transit,1,5,133.43
+ORD-2026-1045,2026-03-18,West Hub - Reno,Same-Day Courier,In Transit,8,3,214.26
+ORD-2026-1046,2026-06-23,West Hub - Reno,Express Air,Delivered,1,4,73.41
+ORD-2026-1047,2026-03-31,West Hub - Reno,Standard Ground,Delayed,12,3,50.57
+ORD-2026-1048,2026-01-26,West Hub - Reno,Express Air,Delivered,4,5,151.67
+ORD-2026-1049,2026-02-05,West Hub - Reno,Priority Freight,Delivered,3,5,202.0
+ORD-2026-1050,2026-06-05,East Hub - Newark,Express Air,In Transit,3,5,204.04
+ORD-2026-1051,2026-02-18,EU Hub - Frankfurt,Priority Freight,Delivered,8,3,306.63
+ORD-2026-1052,2026-05-07,EU Hub - Frankfurt,Express Air,Delivered,1,5,313.42
+ORD-2026-1053,2026-04-03,East Hub - Newark,Standard Ground,Delivered,8,5,132.8
+ORD-2026-1054,2026-06-24,West Hub - Reno,Same-Day Courier,Out for Delivery,8,5,198.27
+ORD-2026-1055,2026-01-04,East Hub - Newark,Standard Ground,Delivered,2,2,142.4
+ORD-2026-1056,2026-03-15,EU Hub - Frankfurt,Same-Day Courier,Delivered,2,4,183.61
+ORD-2026-1057,2026-02-09,East Hub - Newark,Express Air,Delivered,2,1,70.84
+ORD-2026-1058,2026-03-25,EU Hub - Frankfurt,Express Air,Delivered,4,4,274.71
+ORD-2026-1059,2026-01-15,West Hub - Reno,Express Air,Delayed,7,4,41.23
+ORD-2026-1060,2026-06-20,West Hub - Reno,Express Air,Delivered,2,4,73.33
+ORD-2026-1061,2026-03-30,East Hub - Newark,Standard Ground,Delivered,7,4,104.29
+ORD-2026-1062,2026-01-31,Central Hub - Chicago,Priority Freight,In Transit,4,5,102.57
+ORD-2026-1063,2026-05-28,Central Hub - Chicago,Same-Day Courier,Delivered,4,5,278.51
+ORD-2026-1064,2026-02-12,East Hub - Newark,Standard Ground,Delivered,2,3,223.87
+ORD-2026-1065,2026-01-30,West Hub - Reno,Express Air,Delivered,1,5,164.17
+ORD-2026-1066,2026-04-09,West Hub - Reno,Standard Ground,Delayed,11,5,294.61
+ORD-2026-1067,2026-06-17,EU Hub - Frankfurt,Standard Ground,Delivered,5,3,119.38
+ORD-2026-1068,2026-01-20,East Hub - Newark,Express Air,Delivered,1,5,262.28
+ORD-2026-1069,2026-01-12,EU Hub - Frankfurt,Express Air,Delayed,8,5,188.16
+ORD-2026-1070,2026-01-03,East Hub - Newark,Standard Ground,Delivered,8,5,208.7
+ORD-2026-1071,2026-04-29,East Hub - Newark,Same-Day Courier,Out for Delivery,8,5,290.63
+ORD-2026-1072,2026-03-04,West Hub - Reno,Express Air,Delayed,5,5,212.6
+ORD-2026-1073,2026-06-27,Central Hub - Chicago,Priority Freight,Delivered,7,5,242.73
+ORD-2026-1074,2026-03-20,Central Hub - Chicago,Standard Ground,Delivered,3,5,308.55
+ORD-2026-1075,2026-02-06,East Hub - Newark,Express Air,Delivered,2,3,178.33
+ORD-2026-1076,2026-06-29,East Hub - Newark,Same-Day Courier,Out for Delivery,2,5,174.1
+ORD-2026-1077,2026-06-13,EU Hub - Frankfurt,Express Air,Delivered,1,5,309.44
+ORD-2026-1078,2026-03-02,East Hub - Newark,Priority Freight,In Transit,8,5,270.41
+ORD-2026-1079,2026-03-25,East Hub - Newark,Same-Day Courier,Delivered,2,2,65.15
+ORD-2026-1080,2026-05-30,Central Hub - Chicago,Standard Ground,Delivered,5,5,144.92
+ORD-2026-1081,2026-05-18,East Hub - Newark,Standard Ground,Delivered,5,5,60.37
+ORD-2026-1082,2026-02-10,East Hub - Newark,Express Air,Delivered,3,5,234.79
+ORD-2026-1083,2026-04-02,EU Hub - Frankfurt,Express Air,Delivered,3,4,76.29
+ORD-2026-1084,2026-04-14,EU Hub - Frankfurt,Standard Ground,Delivered,2,4,66.24
+ORD-2026-1085,2026-01-04,Central Hub - Chicago,Standard Ground,Delivered,8,5,227.45
+ORD-2026-1086,2026-06-15,Central Hub - Chicago,Priority Freight,Delayed,5,1,83.34
+ORD-2026-1087,2026-06-15,EU Hub - Frankfurt,Standard Ground,Delivered,8,4,122.81
+ORD-2026-1088,2026-01-11,EU Hub - Frankfurt,Express Air,Delivered,4,4,141.52
+ORD-2026-1089,2026-01-08,EU Hub - Frankfurt,Same-Day Courier,Delivered,3,3,106.12
+ORD-2026-1090,2026-04-25,West Hub - Reno,Express Air,Delivered,2,4,172.17
+ORD-2026-1091,2026-05-21,EU Hub - Frankfurt,Express Air,Delivered,4,5,83.84
+ORD-2026-1092,2026-05-15,West Hub - Reno,Express Air,Out for Delivery,3,5,255.52
+ORD-2026-1093,2026-03-30,East Hub - Newark,Same-Day Courier,Delivered,2,5,89.61
+ORD-2026-1094,2026-03-13,Central Hub - Chicago,Same-Day Courier,Delivered,8,5,93.66
+ORD-2026-1095,2026-02-10,Central Hub - Chicago,Standard Ground,Delivered,4,5,258.41
+ORD-2026-1096,2026-01-15,West Hub - Reno,Same-Day Courier,Delivered,8,1,76.25
+ORD-2026-1097,2026-03-02,East Hub - Newark,Priority Freight,Delayed,7,2,191.26
+ORD-2026-1098,2026-05-25,West Hub - Reno,Same-Day Courier,Delivered,3,5,51.63
+ORD-2026-1099,2026-03-01,West Hub - Reno,Express Air,Delivered,1,5,206.17
+ORD-2026-1100,2026-02-03,East Hub - Newark,Standard Ground,Delayed,13,5,68.58
+ORD-2026-1101,2026-06-30,West Hub - Reno,Express Air,In Transit,3,2,135.21
+ORD-2026-1102,2026-06-19,EU Hub - Frankfurt,Express Air,Delivered,3,5,71.46
+ORD-2026-1103,2026-04-22,EU Hub - Frankfurt,Priority Freight,Delivered,6,4,299.01
+ORD-2026-1104,2026-04-02,West Hub - Reno,Standard Ground,Delivered,7,4,62.57
+ORD-2026-1105,2026-01-01,EU Hub - Frankfurt,Express Air,Delivered,3,3,310.42
+ORD-2026-1106,2026-02-26,Central Hub - Chicago,Same-Day Courier,Delivered,7,5,127.31
+ORD-2026-1107,2026-03-23,West Hub - Reno,Express Air,In Transit,3,5,103.24
+ORD-2026-1108,2026-03-05,Central Hub - Chicago,Priority Freight,Delivered,2,4,39.2
+ORD-2026-1109,2026-04-23,EU Hub - Frankfurt,Standard Ground,Delayed,11,5,135.73
+ORD-2026-1110,2026-05-03,West Hub - Reno,Standard Ground,Delivered,8,4,112.0
+ORD-2026-1111,2026-03-23,East Hub - Newark,Express Air,Delivered,2,3,72.47
+ORD-2026-1112,2026-01-20,Central Hub - Chicago,Priority Freight,Delivered,6,3,232.83
+ORD-2026-1113,2026-04-21,West Hub - Reno,Same-Day Courier,Delivered,2,5,312.45
+ORD-2026-1114,2026-04-15,East Hub - Newark,Priority Freight,Delivered,2,5,193.67
+ORD-2026-1115,2026-05-06,West Hub - Reno,Express Air,Delivered,4,5,268.05
+ORD-2026-1116,2026-06-10,EU Hub - Frankfurt,Standard Ground,Delivered,3,5,111.08
+ORD-2026-1117,2026-01-21,EU Hub - Frankfurt,Express Air,Delivered,4,5,288.99
+ORD-2026-1118,2026-03-09,Central Hub - Chicago,Same-Day Courier,Delivered,5,5,156.5
+ORD-2026-1119,2026-03-09,EU Hub - Frankfurt,Same-Day Courier,Delivered,8,5,43.18
+ORD-2026-1120,2026-06-28,Central Hub - Chicago,Express Air,Delivered,4,1,198.97
+ORD-2026-1121,2026-05-22,Central Hub - Chicago,Same-Day Courier,In Transit,5,2,227.69
+ORD-2026-1122,2026-05-02,West Hub - Reno,Same-Day Courier,Delivered,5,3,235.72
+ORD-2026-1123,2026-05-09,West Hub - Reno,Express Air,Delayed,8,2,74.31
+ORD-2026-1124,2026-02-24,West Hub - Reno,Standard Ground,Delivered,2,1,153.44
+ORD-2026-1125,2026-06-10,West Hub - Reno,Priority Freight,Delivered,7,3,44.77
+ORD-2026-1126,2026-04-10,EU Hub - Frankfurt,Priority Freight,In Transit,6,5,282.67
+ORD-2026-1127,2026-06-29,EU Hub - Frankfurt,Express Air,Delivered,2,5,196.89
+ORD-2026-1128,2026-01-26,Central Hub - Chicago,Express Air,In Transit,3,3,102.92
+ORD-2026-1129,2026-06-17,EU Hub - Frankfurt,Same-Day Courier,Delivered,4,5,207.38
+ORD-2026-1130,2026-06-24,EU Hub - Frankfurt,Express Air,Delivered,3,4,39.54
+ORD-2026-1131,2026-05-02,East Hub - Newark,Priority Freight,Delivered,8,4,116.73
+ORD-2026-1132,2026-05-06,Central Hub - Chicago,Standard Ground,Delivered,7,5,268.62
+ORD-2026-1133,2026-03-10,EU Hub - Frankfurt,Express Air,Delivered,2,3,145.12
+ORD-2026-1134,2026-05-05,East Hub - Newark,Express Air,Delivered,2,5,234.32
+ORD-2026-1135,2026-04-14,West Hub - Reno,Express Air,Delivered,2,4,98.6
+ORD-2026-1136,2026-04-27,Central Hub - Chicago,Priority Freight,Delivered,4,5,161.94
+ORD-2026-1137,2026-04-12,Central Hub - Chicago,Express Air,Delivered,4,5,77.39
+ORD-2026-1138,2026-05-02,East Hub - Newark,Priority Freight,Delivered,4,4,228.21
+ORD-2026-1139,2026-03-14,Central Hub - Chicago,Same-Day Courier,Delivered,8,5,309.65
+ORD-2026-1140,2026-02-26,West Hub - Reno,Standard Ground,Delivered,5,5,280.07
+ORD-2026-1141,2026-06-24,Central Hub - Chicago,Same-Day Courier,Delayed,11,4,27.5
+ORD-2026-1142,2026-03-06,East Hub - Newark,Priority Freight,Delivered,5,3,160.4
+ORD-2026-1143,2026-02-25,EU Hub - Frankfurt,Priority Freight,Delivered,8,4,197.42
+ORD-2026-1144,2026-01-02,East Hub - Newark,Priority Freight,Delivered,2,5,124.2
+ORD-2026-1145,2026-03-12,East Hub - Newark,Priority Freight,Delivered,7,2,217.18
+ORD-2026-1146,2026-02-18,West Hub - Reno,Standard Ground,Delayed,15,5,119.28
+ORD-2026-1147,2026-02-05,Central Hub - Chicago,Same-Day Courier,Out for Delivery,4,3,144.36
+ORD-2026-1148,2026-01-10,West Hub - Reno,Priority Freight,In Transit,3,4,213.3
+ORD-2026-1149,2026-05-02,East Hub - Newark,Priority Freight,In Transit,8,4,189.68
+ORD-2026-1150,2026-03-17,Central Hub - Chicago,Same-Day Courier,Delivered,4,4,189.91
+ORD-2026-1151,2026-02-16,East Hub - Newark,Express Air,Delivered,2,4,115.59
+ORD-2026-1152,2026-03-26,East Hub - Newark,Priority Freight,Delivered,5,3,163.81
+ORD-2026-1153,2026-06-12,Central Hub - Chicago,Same-Day Courier,Delayed,9,3,137.59
+ORD-2026-1154,2026-03-18,EU Hub - Frankfurt,Express Air,Delayed,6,1,126.09
+ORD-2026-1155,2026-05-26,EU Hub - Frankfurt,Standard Ground,Delivered,7,5,48.84
+ORD-2026-1156,2026-03-27,West Hub - Reno,Priority Freight,Delivered,2,5,86.77
+ORD-2026-1157,2026-02-13,West Hub - Reno,Same-Day Courier,In Transit,8,5,206.27
+ORD-2026-1158,2026-06-12,EU Hub - Frankfurt,Same-Day Courier,Delivered,5,5,36.13
+ORD-2026-1159,2026-02-21,East Hub - Newark,Express Air,Delayed,5,4,209.87
+ORD-2026-1160,2026-03-05,West Hub - Reno,Priority Freight,Delivered,2,5,198.66
+ORD-2026-1161,2026-02-12,Central Hub - Chicago,Express Air,Delivered,3,5,178.49
+ORD-2026-1162,2026-05-15,East Hub - Newark,Same-Day Courier,Delayed,8,1,169.6
+ORD-2026-1163,2026-02-18,West Hub - Reno,Same-Day Courier,Delivered,3,4,63.71
+ORD-2026-1164,2026-01-06,West Hub - Reno,Express Air,Delivered,1,5,213.89
+ORD-2026-1165,2026-05-17,Central Hub - Chicago,Express Air,Delivered,1,5,59.16
+ORD-2026-1166,2026-04-24,EU Hub - Frankfurt,Express Air,Delivered,4,4,85.62
+ORD-2026-1167,2026-06-25,Central Hub - Chicago,Priority Freight,Delivered,2,4,104.64
+ORD-2026-1168,2026-06-05,West Hub - Reno,Same-Day Courier,In Transit,2,5,207.22
+ORD-2026-1169,2026-03-14,Central Hub - Chicago,Express Air,Delivered,2,4,270.29
+ORD-2026-1170,2026-02-21,East Hub - Newark,Same-Day Courier,Delivered,2,5,293.56
+ORD-2026-1171,2026-06-26,EU Hub - Frankfurt,Priority Freight,Delivered,2,4,292.53
+ORD-2026-1172,2026-05-27,EU Hub - Frankfurt,Standard Ground,Delayed,15,5,238.45
+ORD-2026-1173,2026-03-07,West Hub - Reno,Same-Day Courier,Out for Delivery,4,5,39.77
+ORD-2026-1174,2026-02-14,Central Hub - Chicago,Priority Freight,Delivered,7,5,242.87
+ORD-2026-1175,2026-01-25,Central Hub - Chicago,Express Air,In Transit,2,5,288.89
+ORD-2026-1176,2026-06-09,East Hub - Newark,Express Air,Delivered,3,5,143.23
+ORD-2026-1177,2026-04-27,East Hub - Newark,Same-Day Courier,Delivered,5,4,216.41
+ORD-2026-1178,2026-02-12,Central Hub - Chicago,Standard Ground,Delivered,2,1,274.08
+ORD-2026-1179,2026-01-27,EU Hub - Frankfurt,Same-Day Courier,In Transit,7,5,205.34
+ORD-2026-1180,2026-04-02,Central Hub - Chicago,Standard Ground,Delivered,5,5,146.33
+ORD-2026-1181,2026-01-12,Central Hub - Chicago,Priority Freight,Delivered,2,4,224.99
+ORD-2026-1182,2026-05-28,West Hub - Reno,Priority Freight,Delivered,7,4,53.1
+ORD-2026-1183,2026-06-19,West Hub - Reno,Same-Day Courier,Delivered,7,4,68.85
+ORD-2026-1184,2026-05-23,Central Hub - Chicago,Express Air,Delivered,2,5,163.44
+ORD-2026-1185,2026-05-07,West Hub - Reno,Express Air,In Transit,3,5,311.19
+ORD-2026-1186,2026-01-13,West Hub - Reno,Same-Day Courier,Delivered,3,5,156.04
+ORD-2026-1187,2026-05-27,EU Hub - Frankfurt,Express Air,In Transit,4,5,314.3
+ORD-2026-1188,2026-06-17,Central Hub - Chicago,Express Air,Delivered,1,5,25.05
+ORD-2026-1189,2026-01-24,East Hub - Newark,Standard Ground,Delivered,5,2,132.19
+ORD-2026-1190,2026-01-14,West Hub - Reno,Same-Day Courier,Delivered,8,4,164.57
+ORD-2026-1191,2026-06-18,East Hub - Newark,Same-Day Courier,Delivered,8,4,25.65
+ORD-2026-1192,2026-04-01,East Hub - Newark,Priority Freight,Delivered,2,3,170.26
+ORD-2026-1193,2026-04-15,Central Hub - Chicago,Priority Freight,Delivered,3,5,276.4
+ORD-2026-1194,2026-02-25,EU Hub - Frankfurt,Standard Ground,Delivered,2,4,38.72
+ORD-2026-1195,2026-06-12,Central Hub - Chicago,Same-Day Courier,Delivered,6,2,64.72
+ORD-2026-1196,2026-05-08,Central Hub - Chicago,Express Air,Delivered,4,4,167.46
+ORD-2026-1197,2026-05-11,West Hub - Reno,Standard Ground,In Transit,3,5,218.97
+ORD-2026-1198,2026-06-05,East Hub - Newark,Same-Day Courier,Delivered,6,3,249.9
+ORD-2026-1199,2026-03-12,EU Hub - Frankfurt,Priority Freight,Out for Delivery,5,4,65.76
+ORD-2026-1200,2026-06-04,East Hub - Newark,Priority Freight,Delivered,6,4,84.26
+ORD-2026-1201,2026-06-09,East Hub - Newark,Priority Freight,Delayed,7,5,229.82
+ORD-2026-1202,2026-03-24,Central Hub - Chicago,Priority Freight,Delivered,6,5,221.81
+ORD-2026-1203,2026-04-17,East Hub - Newark,Same-Day Courier,In Transit,6,5,137.36
+ORD-2026-1204,2026-01-14,Central Hub - Chicago,Standard Ground,Delivered,8,5,109.55
+ORD-2026-1205,2026-03-06,West Hub - Reno,Express Air,Delivered,3,5,184.65
+ORD-2026-1206,2026-04-02,EU Hub - Frankfurt,Express Air,Delivered,2,4,190.57
+ORD-2026-1207,2026-03-02,East Hub - Newark,Express Air,Delayed,10,2,312.87
+ORD-2026-1208,2026-03-22,Central Hub - Chicago,Express Air,In Transit,2,4,255.37
+ORD-2026-1209,2026-04-24,West Hub - Reno,Priority Freight,In Transit,6,4,82.96
+ORD-2026-1210,2026-02-19,East Hub - Newark,Same-Day Courier,Delivered,7,5,308.93
+ORD-2026-1211,2026-05-12,Central Hub - Chicago,Same-Day Courier,Delivered,4,5,63.37
+ORD-2026-1212,2026-05-30,East Hub - Newark,Express Air,Delivered,2,5,298.95
+ORD-2026-1213,2026-06-02,Central Hub - Chicago,Priority Freight,Delivered,6,5,46.5
+ORD-2026-1214,2026-03-23,West Hub - Reno,Standard Ground,Delivered,8,5,147.7
+ORD-2026-1215,2026-05-18,EU Hub - Frankfurt,Express Air,Delivered,2,4,122.66
+ORD-2026-1216,2026-03-17,West Hub - Reno,Same-Day Courier,Out for Delivery,8,4,216.54
+ORD-2026-1217,2026-01-30,East Hub - Newark,Same-Day Courier,Delivered,7,4,208.23
+ORD-2026-1218,2026-01-11,East Hub - Newark,Same-Day Courier,Delayed,8,5,238.57
+ORD-2026-1219,2026-01-07,East Hub - Newark,Same-Day Courier,Delivered,4,3,81.79
+ORD-2026-1220,2026-05-12,Central Hub - Chicago,Express Air,Delivered,1,4,87.18
+ORD-2026-1221,2026-06-11,West Hub - Reno,Same-Day Courier,In Transit,3,5,232.31
+ORD-2026-1222,2026-04-22,Central Hub - Chicago,Standard Ground,Delivered,7,5,50.82
+ORD-2026-1223,2026-01-14,West Hub - Reno,Priority Freight,Delivered,6,4,293.74
+ORD-2026-1224,2026-04-15,EU Hub - Frankfurt,Same-Day Courier,Delivered,5,5,139.9
+ORD-2026-1225,2026-01-31,Central Hub - Chicago,Express Air,In Transit,1,4,46.41
+ORD-2026-1226,2026-05-09,Central Hub - Chicago,Priority Freight,In Transit,4,4,108.05
+ORD-2026-1227,2026-04-23,EU Hub - Frankfurt,Same-Day Courier,In Transit,2,5,182.37
+ORD-2026-1228,2026-02-04,EU Hub - Frankfurt,Priority Freight,Out for Delivery,3,5,286.66
+ORD-2026-1229,2026-06-15,East Hub - Newark,Express Air,Delivered,2,5,26.48
+ORD-2026-1230,2026-06-02,EU Hub - Frankfurt,Express Air,Delivered,3,5,292.16
+ORD-2026-1231,2026-05-12,West Hub - Reno,Standard Ground,Delivered,6,4,82.33
+ORD-2026-1232,2026-02-16,Central Hub - Chicago,Same-Day Courier,Delivered,2,5,44.87
+ORD-2026-1233,2026-01-26,West Hub - Reno,Same-Day Courier,Out for Delivery,4,5,218.36
+ORD-2026-1234,2026-01-26,East Hub - Newark,Express Air,Delayed,9,5,206.82
+ORD-2026-1235,2026-03-20,West Hub - Reno,Priority Freight,In Transit,5,5,117.4
+ORD-2026-1236,2026-02-26,EU Hub - Frankfurt,Priority Freight,In Transit,3,4,122.81
+ORD-2026-1237,2026-05-03,EU Hub - Frankfurt,Same-Day Courier,Delivered,4,5,57.11
+ORD-2026-1238,2026-06-15,Central Hub - Chicago,Priority Freight,In Transit,3,3,82.95
+ORD-2026-1239,2026-06-10,Central Hub - Chicago,Express Air,Delayed,8,5,251.91
+ORD-2026-1240,2026-02-24,Central Hub - Chicago,Priority Freight,Delivered,6,5,253.68
+ORD-2026-1241,2026-04-04,EU Hub - Frankfurt,Standard Ground,Delayed,11,5,172.83
+ORD-2026-1242,2026-01-24,EU Hub - Frankfurt,Priority Freight,Delivered,7,5,309.38
+ORD-2026-1243,2026-06-07,West Hub - Reno,Standard Ground,Delivered,3,5,191.91
+ORD-2026-1244,2026-02-07,EU Hub - Frankfurt,Priority Freight,Delivered,8,5,43.54
+ORD-2026-1245,2026-04-05,West Hub - Reno,Express Air,Delivered,3,5,295.78
+ORD-2026-1246,2026-01-12,Central Hub - Chicago,Priority Freight,Delivered,6,4,105.68
+ORD-2026-1247,2026-03-09,West Hub - Reno,Same-Day Courier,Delivered,4,5,289.98
+ORD-2026-1248,2026-01-20,East Hub - Newark,Same-Day Courier,Out for Delivery,3,5,129.1
+ORD-2026-1249,2026-03-30,EU Hub - Frankfurt,Same-Day Courier,Delayed,9,3,154.77
+ORD-2026-1250,2026-02-28,Central Hub - Chicago,Priority Freight,Delivered,3,5,202.6
+ORD-2026-1251,2026-01-31,West Hub - Reno,Same-Day Courier,In Transit,7,5,224.19
+ORD-2026-1252,2026-05-03,West Hub - Reno,Standard Ground,Delivered,5,5,37.73
+ORD-2026-1253,2026-05-27,West Hub - Reno,Standard Ground,Delivered,2,3,68.33
+ORD-2026-1254,2026-02-12,East Hub - Newark,Standard Ground,Delivered,5,5,191.26
+ORD-2026-1255,2026-01-05,East Hub - Newark,Express Air,Delivered,4,3,75.32
+ORD-2026-1256,2026-04-16,West Hub - Reno,Standard Ground,Delivered,6,5,238.64
+ORD-2026-1257,2026-03-29,EU Hub - Frankfurt,Express Air,Delivered,4,5,29.89
+ORD-2026-1258,2026-05-14,EU Hub - Frankfurt,Standard Ground,Delivered,3,5,206.35
+ORD-2026-1259,2026-01-10,Central Hub - Chicago,Express Air,Delivered,2,3,184.09
+ORD-2026-1260,2026-01-01,EU Hub - Frankfurt,Same-Day Courier,Delivered,2,4,151.54
+ORD-2026-1261,2026-05-04,EU Hub - Frankfurt,Priority Freight,Delivered,7,3,271.97
+ORD-2026-1262,2026-05-28,Central Hub - Chicago,Same-Day Courier,Delivered,5,4,293.48
+ORD-2026-1263,2026-01-22,East Hub - Newark,Same-Day Courier,Delivered,2,4,257.88
+ORD-2026-1264,2026-05-28,Central Hub - Chicago,Express Air,Delivered,2,4,118.19
+ORD-2026-1265,2026-04-03,Central Hub - Chicago,Standard Ground,Delivered,6,5,277.22
+ORD-2026-1266,2026-04-19,East Hub - Newark,Priority Freight,Out for Delivery,5,4,146.9
+ORD-2026-1267,2026-05-23,EU Hub - Frankfurt,Standard Ground,Delivered,6,5,316.61
+ORD-2026-1268,2026-05-28,East Hub - Newark,Same-Day Courier,In Transit,8,3,60.13
+ORD-2026-1269,2026-02-28,EU Hub - Frankfurt,Standard Ground,Delivered,6,5,124.84
+ORD-2026-1270,2026-05-21,Central Hub - Chicago,Standard Ground,Delivered,7,5,51.87
+ORD-2026-1271,2026-02-07,EU Hub - Frankfurt,Same-Day Courier,Delivered,4,5,48.61
+ORD-2026-1272,2026-01-10,EU Hub - Frankfurt,Same-Day Courier,Delivered,6,5,309.24
+ORD-2026-1273,2026-01-15,West Hub - Reno,Same-Day Courier,Delivered,3,3,299.57
+ORD-2026-1274,2026-05-13,East Hub - Newark,Standard Ground,Delivered,6,5,231.04
+ORD-2026-1275,2026-06-07,West Hub - Reno,Express Air,Delivered,1,1,50.62
+ORD-2026-1276,2026-03-12,EU Hub - Frankfurt,Priority Freight,Delivered,5,5,177.73
+ORD-2026-1277,2026-06-30,Central Hub - Chicago,Express Air,Delivered,3,5,265.58
+ORD-2026-1278,2026-02-27,West Hub - Reno,Same-Day Courier,Delayed,9,5,145.1
+ORD-2026-1279,2026-01-28,Central Hub - Chicago,Priority Freight,Delivered,2,4,307.23
+ORD-2026-1280,2026-05-18,East Hub - Newark,Same-Day Courier,Out for Delivery,6,5,96.77
+ORD-2026-1281,2026-03-28,EU Hub - Frankfurt,Same-Day Courier,Delayed,11,5,101.06
+ORD-2026-1282,2026-04-08,West Hub - Reno,Standard Ground,In Transit,5,2,177.37
+ORD-2026-1283,2026-01-03,East Hub - Newark,Standard Ground,Delivered,5,4,267.22
+ORD-2026-1284,2026-01-20,West Hub - Reno,Same-Day Courier,Delivered,3,3,104.38
+ORD-2026-1285,2026-06-24,West Hub - Reno,Same-Day Courier,In Transit,3,4,282.46
+ORD-2026-1286,2026-02-22,West Hub - Reno,Standard Ground,In Transit,8,4,71.02
+ORD-2026-1287,2026-01-28,Central Hub - Chicago,Express Air,Delivered,4,4,250.45
+ORD-2026-1288,2026-05-19,Central Hub - Chicago,Same-Day Courier,Delivered,4,5,315.68
+ORD-2026-1289,2026-05-28,East Hub - Newark,Same-Day Courier,Delivered,8,3,107.68
+ORD-2026-1290,2026-02-26,West Hub - Reno,Express Air,Delivered,4,5,184.53
+ORD-2026-1291,2026-05-09,East Hub - Newark,Same-Day Courier,In Transit,8,5,313.07
+ORD-2026-1292,2026-06-28,EU Hub - Frankfurt,Priority Freight,Delivered,2,4,136.93
+ORD-2026-1293,2026-01-26,East Hub - Newark,Priority Freight,Delivered,4,5,102.54
+ORD-2026-1294,2026-03-10,EU Hub - Frankfurt,Priority Freight,Delivered,5,5,148.63
+ORD-2026-1295,2026-04-06,East Hub - Newark,Same-Day Courier,Delivered,3,5,313.89
+ORD-2026-1296,2026-06-25,West Hub - Reno,Express Air,In Transit,2,5,277.61
+ORD-2026-1297,2026-02-20,West Hub - Reno,Standard Ground,Delivered,2,5,172.38
+ORD-2026-1298,2026-06-11,East Hub - Newark,Same-Day Courier,Delivered,6,3,39.07
+ORD-2026-1299,2026-01-26,West Hub - Reno,Express Air,Delivered,3,5,210.81
+ORD-2026-1300,2026-04-26,East Hub - Newark,Priority Freight,Delivered,6,5,263.95
+ORD-2026-1301,2026-03-30,Central Hub - Chicago,Same-Day Courier,Delivered,8,4,203.64
+ORD-2026-1302,2026-05-28,West Hub - Reno,Priority Freight,Delivered,7,5,253.55
+ORD-2026-1303,2026-04-25,Central Hub - Chicago,Same-Day Courier,Delivered,5,4,67.73
+ORD-2026-1304,2026-02-12,East Hub - Newark,Same-Day Courier,Delivered,6,5,292.59
+ORD-2026-1305,2026-01-21,West Hub - Reno,Priority Freight,Delivered,4,4,234.58
+ORD-2026-1306,2026-06-04,EU Hub - Frankfurt,Priority Freight,Delayed,13,4,178.68
+ORD-2026-1307,2026-04-26,EU Hub - Frankfurt,Standard Ground,Delivered,2,5,94.22
+ORD-2026-1308,2026-03-06,Central Hub - Chicago,Standard Ground,Delivered,2,5,301.35
+ORD-2026-1309,2026-05-02,Central Hub - Chicago,Express Air,In Transit,1,5,207.34
+ORD-2026-1310,2026-01-22,EU Hub - Frankfurt,Priority Freight,Delivered,7,5,209.81
+ORD-2026-1311,2026-02-03,West Hub - Reno,Express Air,Delivered,3,3,120.93
+ORD-2026-1312,2026-05-02,EU Hub - Frankfurt,Priority Freight,Delivered,3,2,230.8
+ORD-2026-1313,2026-02-15,EU Hub - Frankfurt,Same-Day Courier,Delivered,7,5,293.13
+ORD-2026-1314,2026-05-04,West Hub - Reno,Express Air,Delivered,3,5,70.94
+ORD-2026-1315,2026-01-03,Central Hub - Chicago,Standard Ground,Delivered,5,5,227.89
+ORD-2026-1316,2026-05-06,EU Hub - Frankfurt,Priority Freight,Delivered,5,4,201.12
+ORD-2026-1317,2026-01-02,East Hub - Newark,Standard Ground,Delivered,6,5,98.72
+ORD-2026-1318,2026-06-15,EU Hub - Frankfurt,Same-Day Courier,Delivered,2,5,95.67
+ORD-2026-1319,2026-06-06,East Hub - Newark,Priority Freight,Delivered,6,4,146.81
+ORD-2026-1320,2026-01-18,West Hub - Reno,Standard Ground,Delivered,7,5,158.57
+ORD-2026-1321,2026-06-29,EU Hub - Frankfurt,Standard Ground,Delivered,3,5,182.82
+ORD-2026-1322,2026-02-17,Central Hub - Chicago,Priority Freight,Delivered,7,5,27.42
+ORD-2026-1323,2026-01-24,West Hub - Reno,Express Air,Delivered,3,5,256.79
+ORD-2026-1324,2026-05-08,East Hub - Newark,Same-Day Courier,Delivered,2,5,273.85
+ORD-2026-1325,2026-02-07,Central Hub - Chicago,Priority Freight,In Transit,2,5,78.57
+ORD-2026-1326,2026-03-06,EU Hub - Frankfurt,Express Air,Delivered,2,5,312.62
+ORD-2026-1327,2026-03-05,Central Hub - Chicago,Standard Ground,Delivered,8,5,221.47
+ORD-2026-1328,2026-02-23,EU Hub - Frankfurt,Same-Day Courier,Delivered,4,2,71.79
+ORD-2026-1329,2026-01-11,Central Hub - Chicago,Priority Freight,Delivered,4,5,286.82
+ORD-2026-1330,2026-06-20,West Hub - Reno,Express Air,Delivered,4,5,74.37
+ORD-2026-1331,2026-03-12,Central Hub - Chicago,Same-Day Courier,In Transit,2,2,196.42
+ORD-2026-1332,2026-06-26,EU Hub - Frankfurt,Standard Ground,Delivered,2,5,172.48
+ORD-2026-1333,2026-06-25,East Hub - Newark,Express Air,Delivered,2,4,258.48
+ORD-2026-1334,2026-02-02,EU Hub - Frankfurt,Standard Ground,Delivered,6,4,248.23
+ORD-2026-1335,2026-04-23,West Hub - Reno,Express Air,Delivered,3,4,98.96
+ORD-2026-1336,2026-01-11,EU Hub - Frankfurt,Same-Day Courier,Delivered,6,4,80.98
+ORD-2026-1337,2026-02-17,East Hub - Newark,Priority Freight,In Transit,4,3,201.61
+ORD-2026-1338,2026-05-22,West Hub - Reno,Express Air,Delivered,4,5,102.69
+ORD-2026-1339,2026-04-04,EU Hub - Frankfurt,Express Air,In Transit,4,4,285.47
+ORD-2026-1340,2026-06-08,East Hub - Newark,Standard Ground,Delivered,2,4,183.99
+ORD-2026-1341,2026-04-10,West Hub - Reno,Same-Day Courier,In Transit,3,4,120.17
+ORD-2026-1342,2026-06-14,East Hub - Newark,Express Air,Delivered,1,5,301.65
+ORD-2026-1343,2026-02-15,Central Hub - Chicago,Standard Ground,Delivered,3,5,193.45
+ORD-2026-1344,2026-04-10,EU Hub - Frankfurt,Priority Freight,Delivered,3,4,45.91
+ORD-2026-1345,2026-02-23,EU Hub - Frankfurt,Express Air,Delivered,1,5,244.33
+ORD-2026-1346,2026-04-17,East Hub - Newark,Express Air,In Transit,3,5,241.62
+ORD-2026-1347,2026-03-19,Central Hub - Chicago,Standard Ground,Out for Delivery,2,5,93.15
+ORD-2026-1348,2026-04-09,West Hub - Reno,Standard Ground,Delivered,3,5,304.51
+ORD-2026-1349,2026-05-23,EU Hub - Frankfurt,Express Air,In Transit,3,4,232.25
+ORD-2026-1350,2026-04-20,Central Hub - Chicago,Standard Ground,In Transit,6,5,124.57
+ORD-2026-1351,2026-02-10,EU Hub - Frankfurt,Priority Freight,Delayed,11,4,146.64
+ORD-2026-1352,2026-06-12,EU Hub - Frankfurt,Priority Freight,Delivered,6,5,135.64
+ORD-2026-1353,2026-05-21,East Hub - Newark,Priority Freight,Out for Delivery,5,2,25.06
+ORD-2026-1354,2026-01-09,East Hub - Newark,Express Air,Delivered,3,5,315.4
+ORD-2026-1355,2026-02-24,East Hub - Newark,Express Air,In Transit,3,3,175.83
+ORD-2026-1356,2026-05-27,West Hub - Reno,Express Air,Delivered,3,5,103.17
+ORD-2026-1357,2026-05-30,West Hub - Reno,Standard Ground,Delivered,4,5,142.94
+ORD-2026-1358,2026-02-25,Central Hub - Chicago,Priority Freight,In Transit,3,5,290.21
+ORD-2026-1359,2026-06-29,Central Hub - Chicago,Priority Freight,Delivered,8,5,48.15
+ORD-2026-1360,2026-01-15,East Hub - Newark,Priority Freight,Delayed,11,2,60.56
+ORD-2026-1361,2026-02-28,Central Hub - Chicago,Same-Day Courier,Delivered,6,5,184.28
+ORD-2026-1362,2026-02-08,East Hub - Newark,Standard Ground,Delivered,7,4,140.9
+ORD-2026-1363,2026-04-25,Central Hub - Chicago,Standard Ground,Delivered,8,5,64.0
+ORD-2026-1364,2026-01-22,EU Hub - Frankfurt,Express Air,Delivered,3,5,173.04
+ORD-2026-1365,2026-06-28,West Hub - Reno,Standard Ground,Delivered,3,5,217.41
+ORD-2026-1366,2026-02-20,West Hub - Reno,Standard Ground,Delivered,8,5,227.0
+ORD-2026-1367,2026-05-28,Central Hub - Chicago,Express Air,Delivered,4,5,81.19
+ORD-2026-1368,2026-03-30,Central Hub - Chicago,Priority Freight,Delivered,4,4,317.1
+ORD-2026-1369,2026-04-24,West Hub - Reno,Same-Day Courier,Delivered,8,5,227.18
+ORD-2026-1370,2026-02-09,Central Hub - Chicago,Express Air,In Transit,2,2,298.39
+ORD-2026-1371,2026-03-15,Central Hub - Chicago,Priority Freight,Delivered,2,5,164.0
+ORD-2026-1372,2026-03-26,West Hub - Reno,Standard Ground,Delivered,6,4,186.9
+ORD-2026-1373,2026-06-09,West Hub - Reno,Express Air,Delivered,1,5,42.73
+ORD-2026-1374,2026-02-21,East Hub - Newark,Express Air,Delivered,1,5,219.81
+ORD-2026-1375,2026-06-19,East Hub - Newark,Express Air,Delivered,4,5,137.31
+ORD-2026-1376,2026-01-26,East Hub - Newark,Same-Day Courier,In Transit,6,5,83.67
+ORD-2026-1377,2026-04-28,Central Hub - Chicago,Express Air,Delivered,3,5,141.05
+ORD-2026-1378,2026-02-10,Central Hub - Chicago,Priority Freight,Delivered,4,4,94.68
+ORD-2026-1379,2026-05-09,East Hub - Newark,Express Air,Delivered,4,3,265.38
+ORD-2026-1380,2026-01-08,East Hub - Newark,Standard Ground,Delivered,5,4,50.9
+ORD-2026-1381,2026-04-08,West Hub - Reno,Same-Day Courier,Delivered,3,5,117.15
+ORD-2026-1382,2026-06-04,East Hub - Newark,Same-Day Courier,Delivered,3,4,196.4
+ORD-2026-1383,2026-06-25,West Hub - Reno,Standard Ground,Delivered,7,3,293.32
+ORD-2026-1384,2026-04-21,West Hub - Reno,Standard Ground,Delivered,6,5,237.23
+ORD-2026-1385,2026-02-17,East Hub - Newark,Standard Ground,In Transit,8,5,312.0
+ORD-2026-1386,2026-04-16,East Hub - Newark,Same-Day Courier,In Transit,8,3,300.31
+ORD-2026-1387,2026-03-12,West Hub - Reno,Standard Ground,Delivered,3,5,315.86
+ORD-2026-1388,2026-06-07,East Hub - Newark,Standard Ground,Delivered,3,4,130.98
+ORD-2026-1389,2026-06-26,EU Hub - Frankfurt,Standard Ground,Delivered,6,5,216.62
+ORD-2026-1390,2026-02-17,EU Hub - Frankfurt,Same-Day Courier,Delivered,3,5,34.51
+ORD-2026-1391,2026-01-04,East Hub - Newark,Same-Day Courier,Delivered,7,1,248.54
+ORD-2026-1392,2026-01-17,West Hub - Reno,Same-Day Courier,In Transit,5,4,280.7
+ORD-2026-1393,2026-03-05,EU Hub - Frankfurt,Same-Day Courier,In Transit,6,4,137.21
+ORD-2026-1394,2026-03-22,EU Hub - Frankfurt,Express Air,Delivered,4,5,283.94
+ORD-2026-1395,2026-03-04,EU Hub - Frankfurt,Express Air,Delivered,1,5,154.67
+ORD-2026-1396,2026-03-19,East Hub - Newark,Same-Day Courier,Delivered,4,4,41.09
+ORD-2026-1397,2026-05-13,West Hub - Reno,Same-Day Courier,In Transit,5,5,172.69
+ORD-2026-1398,2026-02-16,West Hub - Reno,Same-Day Courier,Delivered,5,5,158.84
+ORD-2026-1399,2026-02-21,EU Hub - Frankfurt,Express Air,Delivered,2,4,61.45

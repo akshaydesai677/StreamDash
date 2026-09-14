@@ -1,0 +1,92 @@
+id: executive_kpi_portal
+title: Executive KPI & Operations Portal
+description: Comprehensive executive metrics and performance distributions.
+category: Business Analytics
+icon: "\U0001F4CA"
+sort_order: 1
+roles:
+- admin
+- analyst
+data_source:
+  type: csv
+  path: data\customer_data.csv
+  date_columns:
+  - Signup_Date
+filters:
+- id: filter_customer_id
+  column: Customer_ID
+  type: multiselect
+  label: Filter by Customer_ID
+  default: []
+- id: filter_signup_date
+  column: Signup_Date
+  type: multiselect
+  label: Filter by Signup_Date
+  default: []
+tabs:
+- id: tab_overview
+  title: "\U0001F4CA Executive Summary"
+  description: High-level overview and primary metrics.
+  metrics:
+  - label: NPS score
+    column: NPS_Score
+    agg: sum
+    format: currency
+    help: Calculated sum of NPS_Score
+  - label: Total Segment
+    column: Segment
+    agg: sum
+    format: currency
+    help: Calculated sum of Segment
+  - label: Total Plan
+    column: Plan
+    agg: sum
+    format: currency
+    help: Calculated sum of Plan
+  charts:
+  - id: chart_1
+    title: Analysis Chart 1
+    type: bar
+    x: Segment
+    y: Plan
+    agg: sum
+    col_width: 6
+    color: Monthly_Spend
+    barmode: group
+  - id: chart_added_2
+    title: MEAN of NPS_Score by Segment
+    type: bar
+    x: Segment
+    y: NPS_Score
+    agg: mean
+    color: Plan
+    col_width: 6
+    show_labels: false
+    labels: none
+    palette: streamdash
+    barmode: group
+    orientation: vertical
+- id: tab_charts
+  title: "\U0001F4C8 Detailed Charts"
+  description: Detailed multi-dimensional charts.
+  charts:
+  - id: chart_2
+    title: Analysis Chart 2
+    type: scatter
+    x: Segment
+    y: Signup_Date
+    col_width: 6
+    color: NPS_Score
+- id: tab_data
+  title: "\U0001F4CB Data Table"
+  description: Tabular records and export options.
+  table:
+    show: true
+    title: Raw Dataset Records
+    columns:
+    - Customer_ID
+    - Signup_Date
+    - Segment
+    - Plan
+    - Monthly_Spend
+    - NPS_Score

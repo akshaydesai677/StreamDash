@@ -1,0 +1,301 @@
+Customer_ID,Signup_Date,Segment,Plan,Monthly_Spend,NPS_Score,Churn_Status,Support_Tickets
+CUST-2000,2026-01-30,Startup,Enterprise Scale,5646,2,Active,3
+CUST-2001,2026-05-21,Startup,Starter,295,2,At Risk,2
+CUST-2002,2026-02-07,Mid-Market,Starter,206,2,Active,0
+CUST-2003,2026-02-03,Mid-Market,Starter,258,7,Active,4
+CUST-2004,2026-01-02,Startup,Professional,1101,1,Active,4
+CUST-2005,2026-06-03,Enterprise,Professional,783,2,Active,0
+CUST-2006,2026-06-17,SMB,Starter,136,4,Active,2
+CUST-2007,2026-01-23,Enterprise,Starter,205,9,Active,4
+CUST-2008,2026-05-24,Mid-Market,Custom Unlimited,8587,4,Active,2
+CUST-2009,2026-04-05,Startup,Starter,293,2,Active,0
+CUST-2010,2026-06-27,SMB,Enterprise Scale,6797,9,Active,0
+CUST-2011,2026-01-28,Enterprise,Custom Unlimited,12705,5,Active,2
+CUST-2012,2026-05-15,SMB,Professional,1075,7,Active,3
+CUST-2013,2026-02-16,Mid-Market,Enterprise Scale,3468,1,Active,1
+CUST-2014,2026-06-07,Startup,Custom Unlimited,17181,3,Active,0
+CUST-2015,2026-06-13,Mid-Market,Enterprise Scale,3055,8,Active,2
+CUST-2016,2026-01-02,Enterprise,Enterprise Scale,7160,3,Active,2
+CUST-2017,2026-03-28,Startup,Custom Unlimited,15888,7,Active,4
+CUST-2018,2026-03-27,Startup,Custom Unlimited,12904,10,Active,2
+CUST-2019,2026-05-23,Enterprise,Professional,1200,2,Active,2
+CUST-2020,2026-01-08,SMB,Custom Unlimited,17354,2,Active,4
+CUST-2021,2026-01-30,SMB,Enterprise Scale,4724,3,Active,2
+CUST-2022,2026-04-26,SMB,Professional,808,0,Active,1
+CUST-2023,2026-01-24,Startup,Starter,222,7,Active,4
+CUST-2024,2026-03-21,SMB,Professional,1391,2,Active,1
+CUST-2025,2026-01-10,Startup,Custom Unlimited,9897,0,Active,4
+CUST-2026,2026-01-23,SMB,Custom Unlimited,13119,4,Active,1
+CUST-2027,2026-03-24,Mid-Market,Professional,782,10,Active,0
+CUST-2028,2026-03-11,Mid-Market,Professional,616,3,Active,4
+CUST-2029,2026-03-31,SMB,Enterprise Scale,4820,1,Active,2
+CUST-2030,2026-06-06,SMB,Custom Unlimited,15712,0,At Risk,1
+CUST-2031,2026-04-09,Enterprise,Starter,208,10,At Risk,11
+CUST-2032,2026-06-29,Startup,Enterprise Scale,4123,7,Active,4
+CUST-2033,2026-02-03,Enterprise,Custom Unlimited,15625,3,Active,1
+CUST-2034,2026-06-07,SMB,Enterprise Scale,5206,0,Active,0
+CUST-2035,2026-05-02,Enterprise,Enterprise Scale,3899,9,Active,4
+CUST-2036,2026-02-02,Enterprise,Custom Unlimited,13339,1,Active,2
+CUST-2037,2026-05-17,Startup,Custom Unlimited,11992,7,Active,3
+CUST-2038,2026-01-17,SMB,Professional,1104,5,Active,4
+CUST-2039,2026-06-27,Mid-Market,Professional,1184,1,Active,4
+CUST-2040,2026-06-02,Startup,Enterprise Scale,6147,6,Active,0
+CUST-2041,2026-06-03,Enterprise,Custom Unlimited,9483,2,Active,4
+CUST-2042,2026-06-12,Enterprise,Professional,651,9,Active,4
+CUST-2043,2026-04-25,Mid-Market,Professional,1397,10,Active,2
+CUST-2044,2026-04-22,SMB,Starter,248,4,At Risk,0
+CUST-2045,2026-04-05,Enterprise,Starter,279,0,At Risk,3
+CUST-2046,2026-04-21,Startup,Enterprise Scale,5826,3,Active,1
+CUST-2047,2026-05-02,Mid-Market,Professional,892,10,Active,1
+CUST-2048,2026-02-04,Enterprise,Starter,264,2,Active,0
+CUST-2049,2026-02-05,Startup,Custom Unlimited,10945,6,Active,4
+CUST-2050,2026-04-26,Startup,Enterprise Scale,5979,7,Active,1
+CUST-2051,2026-05-09,SMB,Custom Unlimited,8548,9,Churned,7
+CUST-2052,2026-06-30,SMB,Starter,247,8,Active,2
+CUST-2053,2026-04-30,Enterprise,Starter,161,4,Active,4
+CUST-2054,2026-01-14,SMB,Starter,219,5,Active,3
+CUST-2055,2026-04-01,SMB,Enterprise Scale,7395,9,Active,2
+CUST-2056,2026-01-16,Startup,Professional,551,1,Active,1
+CUST-2057,2026-05-10,Enterprise,Enterprise Scale,4801,0,At Risk,11
+CUST-2058,2026-01-29,Mid-Market,Professional,956,3,Active,3
+CUST-2059,2026-02-16,Enterprise,Enterprise Scale,3688,2,At Risk,7
+CUST-2060,2026-04-16,Startup,Professional,949,5,Active,0
+CUST-2061,2026-06-14,SMB,Starter,112,7,Active,4
+CUST-2062,2026-03-01,Startup,Custom Unlimited,16690,0,At Risk,4
+CUST-2063,2026-04-25,Startup,Enterprise Scale,2836,10,At Risk,5
+CUST-2064,2026-04-21,SMB,Enterprise Scale,3305,6,Active,3
+CUST-2065,2026-06-22,Mid-Market,Professional,844,10,Active,0
+CUST-2066,2026-01-18,Enterprise,Custom Unlimited,15306,4,Active,2
+CUST-2067,2026-02-19,Enterprise,Starter,257,3,Active,4
+CUST-2068,2026-06-13,Enterprise,Starter,121,10,Active,4
+CUST-2069,2026-02-17,Enterprise,Professional,800,4,Active,3
+CUST-2070,2026-06-27,SMB,Enterprise Scale,3106,6,Active,3
+CUST-2071,2026-03-27,Enterprise,Enterprise Scale,6109,3,Active,4
+CUST-2072,2026-04-11,Mid-Market,Custom Unlimited,15065,10,Active,0
+CUST-2073,2026-04-24,SMB,Starter,107,7,Active,0
+CUST-2074,2026-05-08,Mid-Market,Starter,108,5,Active,3
+CUST-2075,2026-05-28,Enterprise,Custom Unlimited,9148,0,Active,3
+CUST-2076,2026-06-26,Startup,Starter,244,6,Active,0
+CUST-2077,2026-06-11,Enterprise,Enterprise Scale,5285,4,At Risk,10
+CUST-2078,2026-02-21,Mid-Market,Starter,197,1,Active,2
+CUST-2079,2026-05-05,Enterprise,Custom Unlimited,8584,9,Active,1
+CUST-2080,2026-05-06,Startup,Starter,237,7,Active,0
+CUST-2081,2026-01-10,SMB,Starter,185,10,Active,4
+CUST-2082,2026-04-28,Mid-Market,Professional,536,7,Active,4
+CUST-2083,2026-01-12,Mid-Market,Professional,675,1,Active,3
+CUST-2084,2026-06-06,Mid-Market,Starter,126,3,Active,0
+CUST-2085,2026-02-21,Startup,Enterprise Scale,5793,10,Active,4
+CUST-2086,2026-05-20,Mid-Market,Enterprise Scale,2873,1,Active,0
+CUST-2087,2026-03-12,Mid-Market,Custom Unlimited,17067,3,Active,4
+CUST-2088,2026-01-11,Mid-Market,Starter,260,7,Active,0
+CUST-2089,2026-01-02,Enterprise,Professional,1222,7,Active,1
+CUST-2090,2026-02-22,Mid-Market,Enterprise Scale,5875,9,At Risk,11
+CUST-2091,2026-01-10,Mid-Market,Custom Unlimited,12934,0,Active,4
+CUST-2092,2026-03-02,Mid-Market,Starter,234,8,At Risk,8
+CUST-2093,2026-02-26,Startup,Professional,553,10,Active,3
+CUST-2094,2026-05-08,Mid-Market,Professional,1443,4,Active,1
+CUST-2095,2026-04-22,SMB,Enterprise Scale,6212,0,Active,4
+CUST-2096,2026-02-15,Mid-Market,Starter,223,7,At Risk,9
+CUST-2097,2026-05-29,SMB,Custom Unlimited,11769,5,Active,1
+CUST-2098,2026-01-26,Mid-Market,Custom Unlimited,9204,7,Active,0
+CUST-2099,2026-04-22,Mid-Market,Professional,964,7,Active,1
+CUST-2100,2026-06-11,SMB,Enterprise Scale,3542,0,Active,2
+CUST-2101,2026-02-04,Enterprise,Custom Unlimited,13629,4,Active,4
+CUST-2102,2026-02-10,Mid-Market,Professional,920,3,At Risk,9
+CUST-2103,2026-05-02,Startup,Enterprise Scale,6007,6,Active,4
+CUST-2104,2026-02-26,Mid-Market,Starter,205,8,Active,0
+CUST-2105,2026-04-19,Startup,Custom Unlimited,15412,1,Active,4
+CUST-2106,2026-01-04,Startup,Professional,866,1,Active,0
+CUST-2107,2026-05-03,SMB,Professional,969,7,Active,3
+CUST-2108,2026-02-05,Startup,Professional,1140,1,At Risk,6
+CUST-2109,2026-06-26,SMB,Starter,174,3,Active,0
+CUST-2110,2026-06-08,SMB,Starter,230,5,Active,3
+CUST-2111,2026-06-08,Enterprise,Enterprise Scale,7077,3,Active,1
+CUST-2112,2026-03-27,Mid-Market,Starter,265,3,Active,2
+CUST-2113,2026-04-01,SMB,Custom Unlimited,14108,7,Active,4
+CUST-2114,2026-05-15,Enterprise,Custom Unlimited,12788,5,Active,0
+CUST-2115,2026-02-18,Startup,Starter,119,1,Churned,1
+CUST-2116,2026-02-12,SMB,Starter,277,8,At Risk,10
+CUST-2117,2026-01-06,SMB,Custom Unlimited,15764,7,Active,0
+CUST-2118,2026-03-16,Mid-Market,Starter,104,6,Active,4
+CUST-2119,2026-03-29,SMB,Custom Unlimited,16986,4,Active,4
+CUST-2120,2026-02-03,SMB,Professional,731,0,Churned,2
+CUST-2121,2026-04-01,SMB,Custom Unlimited,16770,2,Active,1
+CUST-2122,2026-02-11,Mid-Market,Starter,109,5,Active,1
+CUST-2123,2026-02-22,Enterprise,Enterprise Scale,5554,2,Active,4
+CUST-2124,2026-03-19,Enterprise,Starter,202,5,At Risk,2
+CUST-2125,2026-01-02,SMB,Enterprise Scale,4874,9,Active,3
+CUST-2126,2026-03-28,Enterprise,Custom Unlimited,9914,6,Active,4
+CUST-2127,2026-02-26,Startup,Enterprise Scale,2950,9,Active,4
+CUST-2128,2026-02-26,SMB,Professional,584,1,Active,4
+CUST-2129,2026-04-11,Mid-Market,Custom Unlimited,16381,10,At Risk,5
+CUST-2130,2026-04-12,Mid-Market,Custom Unlimited,8199,5,Active,2
+CUST-2131,2026-04-25,Enterprise,Professional,1408,4,Active,1
+CUST-2132,2026-04-19,Startup,Professional,1111,7,Active,4
+CUST-2133,2026-03-27,Enterprise,Custom Unlimited,12478,8,Active,3
+CUST-2134,2026-05-26,Mid-Market,Professional,1351,0,Active,2
+CUST-2135,2026-05-30,SMB,Custom Unlimited,11678,0,Active,1
+CUST-2136,2026-03-09,SMB,Custom Unlimited,14834,10,Active,1
+CUST-2137,2026-01-08,Enterprise,Enterprise Scale,3046,9,Active,3
+CUST-2138,2026-05-25,Startup,Enterprise Scale,6399,9,Active,0
+CUST-2139,2026-03-08,Mid-Market,Starter,136,0,Active,2
+CUST-2140,2026-04-03,Startup,Enterprise Scale,4889,1,Active,4
+CUST-2141,2026-02-19,Mid-Market,Starter,252,5,Active,2
+CUST-2142,2026-03-11,SMB,Starter,235,8,Active,2
+CUST-2143,2026-04-06,Startup,Custom Unlimited,9678,8,Active,1
+CUST-2144,2026-02-18,Enterprise,Custom Unlimited,9909,0,Active,3
+CUST-2145,2026-03-31,SMB,Enterprise Scale,6120,5,Active,1
+CUST-2146,2026-03-19,Enterprise,Starter,155,3,Active,1
+CUST-2147,2026-01-21,Startup,Starter,118,1,Active,0
+CUST-2148,2026-06-18,Enterprise,Custom Unlimited,8709,10,Active,0
+CUST-2149,2026-01-25,Enterprise,Professional,1421,0,Active,0
+CUST-2150,2026-02-07,SMB,Enterprise Scale,6601,1,Active,0
+CUST-2151,2026-05-29,Enterprise,Professional,695,8,At Risk,0
+CUST-2152,2026-01-26,Mid-Market,Custom Unlimited,11033,1,Active,1
+CUST-2153,2026-04-01,Startup,Custom Unlimited,14677,5,Active,0
+CUST-2154,2026-04-30,Enterprise,Professional,1279,0,Active,0
+CUST-2155,2026-03-25,Startup,Starter,197,10,Active,3
+CUST-2156,2026-02-27,Startup,Enterprise Scale,3070,5,At Risk,2
+CUST-2157,2026-01-04,Startup,Starter,200,6,Active,3
+CUST-2158,2026-06-27,Enterprise,Professional,871,6,Active,0
+CUST-2159,2026-03-01,Startup,Custom Unlimited,17726,10,Active,3
+CUST-2160,2026-04-02,Startup,Custom Unlimited,10414,1,Active,0
+CUST-2161,2026-03-06,Startup,Custom Unlimited,8486,0,Active,0
+CUST-2162,2026-05-08,Enterprise,Professional,1118,9,Active,0
+CUST-2163,2026-01-20,Startup,Custom Unlimited,16032,8,Active,2
+CUST-2164,2026-05-19,Enterprise,Starter,209,6,Active,3
+CUST-2165,2026-04-28,Enterprise,Starter,144,2,Active,2
+CUST-2166,2026-04-10,Startup,Starter,244,9,Active,3
+CUST-2167,2026-05-02,Mid-Market,Starter,199,9,Churned,10
+CUST-2168,2026-04-01,SMB,Enterprise Scale,7337,5,Active,2
+CUST-2169,2026-05-30,Enterprise,Enterprise Scale,6007,6,Churned,5
+CUST-2170,2026-01-15,Mid-Market,Professional,1162,1,Active,2
+CUST-2171,2026-01-30,SMB,Professional,1050,6,Active,4
+CUST-2172,2026-05-12,Startup,Enterprise Scale,6347,5,Active,3
+CUST-2173,2026-05-27,Startup,Enterprise Scale,6500,3,Active,2
+CUST-2174,2026-05-08,SMB,Professional,805,10,Active,0
+CUST-2175,2026-05-18,Mid-Market,Enterprise Scale,4935,3,Active,4
+CUST-2176,2026-01-24,Enterprise,Enterprise Scale,7140,3,Active,2
+CUST-2177,2026-01-20,SMB,Enterprise Scale,6923,6,Active,2
+CUST-2178,2026-06-09,Startup,Professional,1141,3,Active,3
+CUST-2179,2026-03-10,Startup,Starter,232,2,Active,2
+CUST-2180,2026-04-22,Startup,Enterprise Scale,4167,4,Active,1
+CUST-2181,2026-03-07,Mid-Market,Custom Unlimited,11144,4,Active,3
+CUST-2182,2026-05-05,Startup,Custom Unlimited,11309,2,Active,0
+CUST-2183,2026-03-08,SMB,Professional,1371,0,Active,0
+CUST-2184,2026-03-22,SMB,Starter,203,2,Active,1
+CUST-2185,2026-01-29,Enterprise,Enterprise Scale,3239,5,Active,2
+CUST-2186,2026-05-30,Startup,Professional,722,4,Active,3
+CUST-2187,2026-04-15,SMB,Starter,224,6,Active,3
+CUST-2188,2026-06-24,Mid-Market,Enterprise Scale,3687,5,Active,2
+CUST-2189,2026-01-06,Enterprise,Starter,275,4,Active,2
+CUST-2190,2026-06-25,Enterprise,Professional,896,4,At Risk,4
+CUST-2191,2026-01-24,Mid-Market,Enterprise Scale,3812,10,Active,3
+CUST-2192,2026-01-09,SMB,Starter,298,5,Active,3
+CUST-2193,2026-01-26,Mid-Market,Enterprise Scale,5382,8,Active,2
+CUST-2194,2026-04-27,Enterprise,Starter,263,2,Active,0
+CUST-2195,2026-04-13,Mid-Market,Enterprise Scale,3173,8,Active,1
+CUST-2196,2026-06-02,Startup,Enterprise Scale,3593,9,Active,2
+CUST-2197,2026-03-14,Mid-Market,Starter,205,9,At Risk,3
+CUST-2198,2026-01-06,Enterprise,Professional,1496,2,Active,0
+CUST-2199,2026-04-13,Startup,Enterprise Scale,5514,1,At Risk,0
+CUST-2200,2026-05-15,Startup,Custom Unlimited,11677,3,Active,2
+CUST-2201,2026-03-15,Startup,Custom Unlimited,17831,4,Active,1
+CUST-2202,2026-04-18,Mid-Market,Custom Unlimited,12289,7,Active,1
+CUST-2203,2026-04-05,Startup,Starter,101,6,Churned,10
+CUST-2204,2026-02-24,Startup,Custom Unlimited,9196,0,Active,0
+CUST-2205,2026-03-27,Mid-Market,Custom Unlimited,8745,8,Active,4
+CUST-2206,2026-04-08,SMB,Custom Unlimited,17167,2,Active,2
+CUST-2207,2026-02-13,Startup,Enterprise Scale,3234,6,Active,1
+CUST-2208,2026-03-08,Enterprise,Enterprise Scale,6589,6,Active,2
+CUST-2209,2026-03-09,SMB,Enterprise Scale,3851,7,Active,1
+CUST-2210,2026-05-23,Startup,Starter,147,7,Active,2
+CUST-2211,2026-02-11,Startup,Custom Unlimited,8668,8,Active,3
+CUST-2212,2026-04-28,Startup,Starter,283,3,Active,2
+CUST-2213,2026-02-16,Mid-Market,Enterprise Scale,7297,0,Active,4
+CUST-2214,2026-05-27,Mid-Market,Custom Unlimited,9545,0,At Risk,4
+CUST-2215,2026-06-24,Enterprise,Custom Unlimited,13300,1,Active,3
+CUST-2216,2026-06-18,Startup,Custom Unlimited,17735,5,Active,0
+CUST-2217,2026-06-17,Startup,Enterprise Scale,7162,0,Active,2
+CUST-2218,2026-03-24,Enterprise,Starter,239,4,Active,1
+CUST-2219,2026-03-03,Startup,Starter,104,6,Active,2
+CUST-2220,2026-06-15,Mid-Market,Starter,175,9,At Risk,2
+CUST-2221,2026-04-02,Enterprise,Enterprise Scale,6510,7,At Risk,4
+CUST-2222,2026-05-25,Startup,Starter,292,6,Active,0
+CUST-2223,2026-01-11,SMB,Custom Unlimited,16115,10,Active,4
+CUST-2224,2026-01-22,SMB,Custom Unlimited,12921,2,Active,2
+CUST-2225,2026-03-05,Startup,Enterprise Scale,7013,8,At Risk,1
+CUST-2226,2026-05-11,Startup,Custom Unlimited,12151,9,Active,0
+CUST-2227,2026-05-09,Enterprise,Starter,288,6,Active,0
+CUST-2228,2026-01-22,Startup,Enterprise Scale,6227,4,Active,2
+CUST-2229,2026-02-17,Mid-Market,Professional,1263,1,At Risk,6
+CUST-2230,2026-05-17,Enterprise,Starter,200,7,Active,3
+CUST-2231,2026-06-18,Startup,Enterprise Scale,5455,1,Active,1
+CUST-2232,2026-02-04,Enterprise,Professional,1334,3,At Risk,7
+CUST-2233,2026-06-16,Mid-Market,Professional,1361,7,Active,1
+CUST-2234,2026-05-02,Startup,Starter,128,7,Churned,0
+CUST-2235,2026-04-26,Mid-Market,Professional,1082,1,Active,3
+CUST-2236,2026-04-17,Startup,Enterprise Scale,5774,9,Active,3
+CUST-2237,2026-03-01,Enterprise,Starter,207,10,Active,3
+CUST-2238,2026-05-02,Enterprise,Custom Unlimited,15345,0,Active,1
+CUST-2239,2026-03-15,Mid-Market,Custom Unlimited,16317,10,Active,2
+CUST-2240,2026-06-04,Startup,Professional,1239,10,Active,2
+CUST-2241,2026-05-01,Mid-Market,Professional,1206,3,Active,1
+CUST-2242,2026-06-05,Startup,Starter,205,8,Active,0
+CUST-2243,2026-01-05,SMB,Enterprise Scale,3799,8,Active,0
+CUST-2244,2026-01-17,SMB,Custom Unlimited,9977,7,Active,2
+CUST-2245,2026-03-29,SMB,Starter,296,8,At Risk,9
+CUST-2246,2026-06-21,Enterprise,Starter,211,9,Churned,9
+CUST-2247,2026-01-27,Enterprise,Starter,141,2,At Risk,11
+CUST-2248,2026-03-16,Startup,Custom Unlimited,10527,5,Active,1
+CUST-2249,2026-02-01,Mid-Market,Custom Unlimited,12019,7,Active,2
+CUST-2250,2026-03-15,Mid-Market,Starter,167,3,Active,1
+CUST-2251,2026-05-16,Startup,Professional,1320,7,At Risk,8
+CUST-2252,2026-06-24,SMB,Starter,212,1,At Risk,5
+CUST-2253,2026-03-22,Startup,Professional,561,10,Active,1
+CUST-2254,2026-05-28,Enterprise,Enterprise Scale,7035,5,Active,2
+CUST-2255,2026-01-03,SMB,Professional,912,9,At Risk,12
+CUST-2256,2026-06-08,Startup,Enterprise Scale,5813,1,At Risk,0
+CUST-2257,2026-05-18,SMB,Custom Unlimited,16527,4,Churned,3
+CUST-2258,2026-01-24,SMB,Enterprise Scale,3810,8,Active,4
+CUST-2259,2026-03-08,Mid-Market,Enterprise Scale,6639,5,Active,2
+CUST-2260,2026-06-10,SMB,Starter,111,0,Active,3
+CUST-2261,2026-03-28,Mid-Market,Professional,805,6,Active,4
+CUST-2262,2026-03-05,Enterprise,Enterprise Scale,4077,2,Active,3
+CUST-2263,2026-04-16,Enterprise,Starter,114,1,Active,2
+CUST-2264,2026-06-23,Startup,Custom Unlimited,14937,7,Churned,11
+CUST-2265,2026-04-17,Mid-Market,Professional,629,8,Active,4
+CUST-2266,2026-01-31,Mid-Market,Custom Unlimited,17159,1,Active,4
+CUST-2267,2026-04-15,Enterprise,Starter,193,1,Active,2
+CUST-2268,2026-03-20,SMB,Enterprise Scale,2729,9,Active,3
+CUST-2269,2026-01-13,SMB,Enterprise Scale,6504,5,Active,0
+CUST-2270,2026-01-12,Startup,Custom Unlimited,15411,6,At Risk,7
+CUST-2271,2026-06-05,Mid-Market,Professional,1150,2,Active,2
+CUST-2272,2026-01-23,Startup,Custom Unlimited,13554,10,Active,3
+CUST-2273,2026-03-13,Enterprise,Professional,524,1,Active,4
+CUST-2274,2026-01-22,Mid-Market,Starter,244,0,Active,0
+CUST-2275,2026-06-18,Mid-Market,Starter,169,9,Active,3
+CUST-2276,2026-01-22,SMB,Custom Unlimited,8381,2,Active,3
+CUST-2277,2026-01-07,SMB,Custom Unlimited,9627,4,Active,1
+CUST-2278,2026-02-16,SMB,Starter,138,5,Active,1
+CUST-2279,2026-01-07,Enterprise,Enterprise Scale,5121,5,Active,2
+CUST-2280,2026-04-07,Enterprise,Starter,150,8,Active,4
+CUST-2281,2026-04-09,Enterprise,Enterprise Scale,6307,7,Active,0
+CUST-2282,2026-04-15,Mid-Market,Starter,167,8,Active,1
+CUST-2283,2026-03-19,Startup,Custom Unlimited,11333,2,Active,2
+CUST-2284,2026-05-19,Mid-Market,Professional,1474,0,Active,3
+CUST-2285,2026-06-08,SMB,Professional,560,10,Active,3
+CUST-2286,2026-03-31,Mid-Market,Enterprise Scale,6875,1,Active,3
+CUST-2287,2026-06-28,Enterprise,Professional,1068,8,Active,2
+CUST-2288,2026-06-24,SMB,Enterprise Scale,6208,5,Active,2
+CUST-2289,2026-02-23,Startup,Enterprise Scale,3595,0,Active,0
+CUST-2290,2026-06-22,Mid-Market,Custom Unlimited,14435,10,Active,0
+CUST-2291,2026-05-18,Enterprise,Custom Unlimited,14166,5,Active,3
+CUST-2292,2026-02-15,Enterprise,Starter,217,0,Active,2
+CUST-2293,2026-06-24,SMB,Professional,1334,7,Active,2
+CUST-2294,2026-01-10,SMB,Custom Unlimited,11425,10,Active,3
+CUST-2295,2026-01-29,SMB,Custom Unlimited,17268,9,Active,4
+CUST-2296,2026-02-14,Enterprise,Professional,565,3,At Risk,8
+CUST-2297,2026-03-12,Mid-Market,Starter,276,7,Active,0
+CUST-2298,2026-04-20,Enterprise,Enterprise Scale,5833,8,Active,3
+CUST-2299,2026-05-07,SMB,Starter,283,8,At Risk,7

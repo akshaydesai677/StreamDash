@@ -1,0 +1,63 @@
+id: custom_visual_analytics_dashboard
+title: Custom Visual Analytics Dashboard
+description: Interactive visual dashboard published via Streamdash Visual Builder.
+category: Visual Analytics
+icon: "\U0001F3A8"
+sort_order: 5
+roles:
+- admin
+- analyst
+theme: ggplot2
+palette: streamdash
+data_source:
+  type: csv
+  path: data\customer_data.csv
+  date_columns:
+  - Signup_Date
+filters:
+- id: filter_customer_id
+  column: Customer_ID
+  type: multiselect
+  label: Filter Customer_ID
+  default: []
+- id: filter_signup_date
+  column: Signup_Date
+  type: multiselect
+  label: Filter Signup_Date
+  default: []
+tabs:
+- id: tab_visual_summary
+  title: "\U0001F4CA Visual Summary"
+  description: Dashboard analytics for Visual Summary.
+  metrics:
+  - label: Total Customer_ID
+    column: Customer_ID
+    agg: count
+    format: integer
+  charts:
+  - id: chart_active_worksheet
+    title: Customer_ID by Signup_Date
+    type: bar
+    x: Signup_Date
+    y: Customer_ID
+    agg: count
+    color: Segment
+    col_width: 7
+    show_labels: false
+    labels: none
+    palette: streamdash
+- id: tab_data_records
+  title: "\U0001F4CB Underlying Records"
+  description: Exploration grid of raw source data records.
+  table:
+    show: true
+    title: Raw Data Grid
+    columns:
+    - Customer_ID
+    - Signup_Date
+    - Segment
+    - Plan
+    - Monthly_Spend
+    - NPS_Score
+    - Churn_Status
+    - Support_Tickets

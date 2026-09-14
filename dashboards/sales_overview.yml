@@ -1,0 +1,113 @@
+id: "sales_overview"
+title: "Enterprise Sales Overview"
+description: "Global revenue metrics, quota attainment, and regional product sales."
+category: "Revenue & Sales"
+icon: "📈"
+sort_order: 1
+roles:
+  - "admin"
+  - "analyst"
+  - "viewer"
+
+data_source:
+  type: "csv"
+  path: "data/sales_data.csv"
+  date_columns:
+    - "Date"
+
+filters:
+  - id: "region_filter"
+    column: "Region"
+    type: "multiselect"
+    label: "Filter Regions"
+    default: []
+  - id: "category_filter"
+    column: "Product_Category"
+    type: "multiselect"
+    label: "Product Category"
+    default: []
+  - id: "rep_filter"
+    column: "Sales_Rep"
+    type: "selectbox"
+    label: "Sales Representative"
+    include_all: true
+
+tabs:
+  - id: "executive_summary"
+    title: "📊 Executive Summary"
+    description: "High-level KPI performance and product category revenue distribution."
+    metrics:
+      - label: "Total Gross Revenue"
+        column: "Revenue"
+        agg: "sum"
+        format: "currency"
+        help: "Sum of total closed revenue for selected criteria"
+        delta_compare_col: "Target_Revenue"
+        delta_type: "diff"
+      - label: "Units Sold"
+        column: "Units_Sold"
+        agg: "sum"
+        format: "integer"
+        help: "Total volume of software licenses / subscriptions sold"
+      - label: "Avg Profit Margin"
+        column: "Profit_Margin"
+        agg: "mean"
+        format: "percent"
+        help: "Average gross margin across completed orders"
+      - label: "Deal Count"
+        column: "Revenue"
+        agg: "count"
+        format: "integer"
+        help: "Number of booked transactions"
+    charts:
+      - id: "chart_revenue_by_cat"
+        title: "Revenue by Product Category & Region"
+        type: "bar"
+        x: "Product_Category"
+        y: "Revenue"
+        agg: "sum"
+        color: "Region"
+        barmode: "group"
+        col_width: 7
+      - id: "chart_region_share"
+        title: "Regional Revenue Share"
+        type: "pie"
+        values: "Revenue"
+        names: "Region"
+        hole: 0.4
+        col_width: 5
+
+  - id: "team_performance"
+    title: "👥 Reps & Margins"
+    description: "Individual sales rep quota achievements and product margin dispersion."
+    charts:
+      - id: "chart_sales_rep_perf"
+        title: "Sales Rep Performance"
+        type: "bar"
+        x: "Sales_Rep"
+        y: "Revenue"
+        agg: "sum"
+        color: "Sales_Rep"
+        col_width: 6
+      - id: "chart_margin_dist"
+        title: "Profit Margin Distribution"
+        type: "box"
+        x: "Product_Category"
+        y: "Profit_Margin"
+        color: "Product_Category"
+        col_width: 6
+
+  - id: "raw_data"
+    title: "📋 Transaction Records"
+    description: "Detailed transactional ledger with export capabilities."
+    table:
+      show: true
+      title: "Transaction Records"
+      columns:
+        - "Date"
+        - "Region"
+        - "Product_Category"
+        - "Sales_Rep"
+        - "Revenue"
+        - "Units_Sold"
+        - "Profit_Margin"

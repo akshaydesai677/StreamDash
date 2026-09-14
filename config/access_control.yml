@@ -1,0 +1,42 @@
+# Streamdash Access Control Configuration
+# Manages users, credentials, roles, and dashboard permissions
+
+users:
+  - username: "admin"
+    password: "admin"
+    role: "admin"
+    display_name: "Admin User"
+    email: "admin@streamdash.local"
+    avatar: "👑"
+
+  - username: "analyst"
+    password: "analyst123"
+    role: "analyst"
+    display_name: "Lead Analyst"
+    email: "analyst@streamdash.local"
+    avatar: "📊"
+
+  - username: "viewer"
+    password: "viewer123"
+    role: "viewer"
+    display_name: "Guest Viewer"
+    email: "viewer@streamdash.local"
+    avatar: "👀"
+
+roles:
+  admin:
+    name: "Administrator"
+    description: "Full access to all dashboards, analytics, and system configurations"
+    allowed_dashboards:
+      - "*"
+  analyst:
+    name: "Business Analyst"
+    description: "Access to operational metrics and sales performance dashboards"
+    allowed_dashboards:
+      - "sales_overview"
+      - "operations_kpi"
+  viewer:
+    name: "Standard Viewer"
+    description: "Read-only access to executive summary dashboards"
+    allowed_dashboards:
+      - "sales_overview"
