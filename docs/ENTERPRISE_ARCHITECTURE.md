@@ -163,18 +163,52 @@ sequenceDiagram
 
 ---
 
-## 7. Recommended Production Tech Stack
+## 7. Recommended Production Tech Stack Matrix
 
-| Component | Recommended Tooling | Cost-Effective Alternative |
-| :--- | :--- | :--- |
-| **Container Platform** | AWS ECS Fargate / Google Cloud Run | Docker Swarm / Single High-Spec VM |
-| **Orchestration** | Kubernetes (EKS / GKE) | Nomad |
-| **Load Balancer** | AWS Application Load Balancer (ALB) | Nginx / Traefik with sticky sessions |
-| **Dashboard Storage** | AWS S3 + Mountpoint / Git Sync | Managed NFS (EFS / Filestore) |
-| **Data Engine** | DuckDB + Parquet (Lakehouse) | PostgreSQL / SQLite |
-| **Cloud Warehouse** | Snowflake / GCP BigQuery | ClickHouse |
-| **Distributed Cache** | AWS ElastiCache Redis | KeyDB / In-memory |
-| **Authentication** | Okta / Azure AD / Auth0 (SAML/OIDC) | Streamdash Native RBAC |
+Choose the architecture that matches your enterprise cloud strategy:
+
+| Component | ❄️ Azure + Snowflake (Recommended) | 🔷 Pure Azure | 🌐 Google Cloud (GCP) | 🟧 Amazon Web Services (AWS) | 🐧 100% Open Source / On-Prem |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Container Hosting** | Azure Container Apps (ACA) / AKS | Azure App Service / Container Apps | Google Cloud Run / GKE | AWS ECS Fargate / EKS | Docker Compose / K3s / Vanilla K8s |
+| **Ingress & Load Balancer** | Azure Application Gateway (Cookie Affinity) | Azure Front Door / App Gateway | Cloud Load Balancing (Session Affinity) | AWS Application Load Balancer (ALB) | NGINX / Traefik (Sticky Cookies) |
+| **Data Warehouse / Engine** | **Snowflake Data Cloud** (Azure Hosted) | Azure Synapse / Microsoft Fabric | **Google BigQuery** | Amazon Redshift / Athena | **DuckDB** / ClickHouse |
+| **Data Lake Storage** | Azure Data Lake Storage Gen2 (ADLS) | ADLS Gen2 / Blob Storage | Google Cloud Storage (GCS) | Amazon S3 | MinIO / Ceph |
+| **Distributed Cache** | Azure Cache for Redis | Azure Cache for Redis | Memorystore for Redis | AWS ElastiCache for Redis | KeyDB / Redis OSS |
+| **Dashboard Catalog Sync** | Azure Files (SMB/NFS) or Git Sync | Azure Files / Blob Fuse | Cloud Storage FUSE / Git Sync | Amazon EFS / S3 Mountpoint | Persistent Volume Claim (PVC) / Git |
+| **Authentication & SSO** | Microsoft Entra ID (Azure AD) | Microsoft Entra ID (Azure AD) | Google Cloud Identity / Okta | AWS IAM Identity Center / Okta | Authentik / Keycloak (OIDC/SAML) |
+| **CI/CD & GitOps** | GitHub Actions / Azure DevOps | Azure DevOps / GitHub Actions | Cloud Build / GitHub Actions | AWS CodePipeline / GitHub Actions | GitLab CI / ArgoCD |
+| **Estimated Cost Profile** | Consumption-based warehouse + serverless containers | Consumption-based Synapse | Pay-per-query BigQuery + serverless | Reserved/On-demand Redshift | Infrastructure only (Zero license fees) |
+
+---
+
+### Deep-Dive: Option Architectures
+
+#### 1. ❄️ Azure + Snowflake (Enterprise Default)
+- **Container Layer**: Azure Container Apps (ACA) with Dapr sidecars or AKS. Replicas auto-scale from 6 to 12 based on HTTP concurrent requests.
+- **Compute Offload**: Snowflake absorbs all compute-heavy aggregations. Streamdash instances only handle lightweight Plotly JSON generation.
+- **Network**: Private Link between Azure VNet and Snowflake Virtual Private Snowflake (VPS) for zero public internet data transit.
+
+#### 2. 🔷 Pure Azure
+- **Compute**: Azure Container Apps or Azure App Service (Linux containers).
+- **Data Engine**: Microsoft Fabric Lakehouse or Azure Synapse SQL Serverless querying Parquet delta tables directly on ADLS Gen2.
+- **Identity**: Microsoft Entra ID (Azure AD) seamless single sign-on via OAuth2/OIDC.
+
+#### 3. 🌐 Google Cloud Platform (GCP)
+- **Compute**: Google Cloud Run with concurrency limit set to 20 requests per container and session affinity enabled.
+- **Data Engine**: Google BigQuery with `@st.cache_data` and PyArrow storage API for high-speed streaming reads.
+- **Storage**: GCS bucket synced via Cloud Storage FUSE.
+
+#### 4. 🟧 Amazon Web Services (AWS)
+- **Compute**: AWS ECS Fargate with Application Load Balancer (ALB) sticky sessions (`AWSALB` cookie).
+- **Data Engine**: Amazon Athena querying Parquet data lakes in S3, or Redshift Serverless for real-time analytics.
+- **File Sync**: AWS EFS mount directly onto ECS task definitions.
+
+#### 5. 🐧 100% Open Source / Self-Hosted (Zero Cloud Spend)
+- **Compute**: K3s or Docker Swarm running on on-premise hardware or bare-metal VMs (e.g. Hetzner, Equinix).
+- **Data Engine**: DuckDB for local datasets and ClickHouse for multi-billion row cluster queries.
+- **Storage & Cache**: MinIO S3-compatible storage with KeyDB (multi-threaded Redis replacement).
+- **Identity**: Self-hosted Keycloak or Authentik providing RBAC.
+
 
 ---
 
