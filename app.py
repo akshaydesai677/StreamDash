@@ -97,11 +97,30 @@ def main():
                 st.rerun()
 
         st.markdown("<div style='height: 8px;'></div>", unsafe_allow_html=True)
-        st.caption("YOUR DASHBOARDS")
+        st.caption("RECENT DASHBOARDS")
+
+        # Track recent dashboard order
+        if "recent_dashboards" not in st.session_state:
+            # Seed with initial authorized dashboards
+            st.session_state.recent_dashboards = [d["id"] for d in dashboards[:8]]
 
         active_id = st.session_state.get("active_dashboard_id")
-        for dash in dashboards:
-            d_id = dash["id"]
+        if active_id:
+            if active_id in st.session_state.recent_dashboards:
+                st.session_state.recent_dashboards.remove(active_id)
+            st.session_state.recent_dashboards.insert(0, active_id)
+            st.session_state.recent_dashboards = st.session_state.recent_dashboards[:8]
+
+        # Order authorized dashboards by recency, followed by remainder
+        dash_dict = {d["id"]: d for d in dashboards}
+        ordered_ids = [d_id for d_id in st.session_state.recent_dashboards if d_id in dash_dict]
+        # Append any remaining authorized dashboards up to a reasonable sidebar limit
+        for d in dashboards:
+            if d["id"] not in ordered_ids and len(ordered_ids) < 8:
+                ordered_ids.append(d["id"])
+
+        for d_id in ordered_ids:
+            dash = dash_dict[d_id]
             icon = dash.get("icon", "📊")
             title = dash.get("title", d_id)
             is_active = (st.session_state.get("current_page") == "dashboard") and (active_id == d_id)
@@ -115,6 +134,12 @@ def main():
                 st.session_state.active_dashboard_id = d_id
                 st.session_state.current_page = "dashboard"
                 st.rerun()
+
+        if len(dashboards) > len(ordered_ids):
+            if st.button("🔍 Browse All Dashboards...", use_container_width=True, key="nav_browse_all"):
+                st.session_state.current_page = "home"
+                st.rerun()
+
 
         st.markdown("---")
         if st.button("🚪 Sign Out", use_container_width=True):
