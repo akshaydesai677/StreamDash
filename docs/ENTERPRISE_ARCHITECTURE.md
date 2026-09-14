@@ -19,32 +19,32 @@ This blueprint details how to scale Streamdash to support **100+ simultaneous co
 ```mermaid
 graph TB
     subgraph Users ["Client Layer (100+ Concurrent Users)"]
-        U1[User Browser 1]
-        U2[User Browser 2]
-        U3[User Browser 100+]
+        U1["User Browser 1"]
+        U2["User Browser 2"]
+        U3["User Browser 100+"]
     end
 
     subgraph Edge ["Edge & Ingress Layer"]
-        CDN[Cloudflare / CloudFront CDN<br/>Static Assets, CSS, JS]
-        LB[Application Load Balancer<br/>Sticky Sessions Enabled via Cookie]
+        CDN["Cloudflare / CloudFront CDN<br/>Static Assets, CSS, JS"]
+        LB["Application Load Balancer<br/>Sticky Sessions Enabled via Cookie"]
     end
 
     subgraph Compute ["Compute Layer (Horizontal Cluster)"]
-        C1[Streamdash Container 1<br/>2 vCPU • 4GB RAM]
-        C2[Streamdash Container 2<br/>2 vCPU • 4GB RAM]
-        C3[Streamdash Container N...<br/>Auto-Scaled (6-12 Replicas)]
+        C1["Streamdash Container 1<br/>2 vCPU • 4GB RAM"]
+        C2["Streamdash Container 2<br/>2 vCPU • 4GB RAM"]
+        C3["Streamdash Container N...<br/>Auto-Scaled 6-12 Replicas"]
     end
 
     subgraph State ["Shared State & Catalog Layer"]
-        Redis[(Redis Cluster<br/>Distributed Query Cache & Sessions)]
-        S3[(Object Storage / Git Volume<br/>1,000+ Dashboard YAMLs)]
+        Redis[("Redis Cluster<br/>Distributed Query Cache & Sessions")]
+        S3[("Object Storage / Git Volume<br/>1,000+ Dashboard YAMLs")]
     end
 
     subgraph Data ["Data Warehouse & Lakehouse Layer"]
-        DuckDB[DuckDB Vectorized File Engine]
-        Parquet[(Apache Parquet S3 Data Lake)]
-        Snowflake[(Snowflake Data Cloud)]
-        BigQuery[(Google Cloud BigQuery)]
+        DuckDB["DuckDB Vectorized File Engine"]
+        Parquet[("Apache Parquet S3 Data Lake")]
+        Snowflake[("Snowflake Data Cloud")]
+        BigQuery[("Google Cloud BigQuery")]
     end
 
     Users --> CDN
@@ -66,9 +66,9 @@ Scanning and parsing 1,000 YAML files from disk on every page refresh causes fil
 
 ```mermaid
 flowchart LR
-    Disk[1,000+ YAML Files] -->|1. Startup Fast-Index| Manifest[Lightweight In-Memory Catalog<br/>200 KB RAM]
-    Manifest -->|2. Role Filtering & Search| UI[Sidebar & Gallery View<br/>Paginated: 24 / page]
-    UI -->|3. On-Click Lazy Load| Renderer[Full Dashboard YAML Loaded<br/>Only for Active Dashboard]
+    Disk["1,000+ YAML Files"] -->|1. Startup Fast-Index| Manifest["Lightweight In-Memory Catalog<br/>200 KB RAM"]
+    Manifest -->|2. Role Filtering & Search| UI["Sidebar & Gallery View<br/>Paginated: 24 / page"]
+    UI -->|3. On-Click Lazy Load| Renderer["Full Dashboard YAML Loaded<br/>Only for Active Dashboard"]
 ```
 
 #### 1. Two-Pass Metadata Manifest (Lazy Loading)
