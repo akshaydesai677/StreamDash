@@ -143,10 +143,46 @@ roles:
       - "customer_insights"
 ```
 
-### Adding New Datasets
+### Adding New Datasets (CSV)
 1. Drop any CSV file into the `data/` folder (e.g. `data/finance_q4.csv`).
 2. Open the **Streamdash Visual Studio** in the app.
 3. Select `finance_q4.csv` from the **Active Dataset** dropdown to begin building charts immediately.
+
+### Connecting to Snowflake Data Warehouse
+Streamdash includes a native Snowflake Data Adapter. You can connect to Snowflake either via dashboard YAML files or via Streamlit secrets.
+
+#### Option A: In Dashboard YAML (`dashboards/my_snowflake_dashboard.yml`)
+```yaml
+data_source:
+  type: "snowflake"
+  account: "xy12345.us-east-1"      # Or use ${SNOWFLAKE_ACCOUNT}
+  user: "ANALYTICS_USER"
+  password: "${SNOWFLAKE_PASSWORD}"  # Injected from environment variable
+  warehouse: "COMPUTE_WH"
+  database: "ANALYTICS_DB"
+  schema: "PUBLIC"
+  role: "ANALYST_ROLE"
+  query: "SELECT ID, REGION, REVENUE, TRANSACTION_DATE FROM SALES_ANALYTICS"
+  date_columns: ["TRANSACTION_DATE"]
+  cache_ttl: 600                     # Cache query results for 10 minutes
+```
+
+#### Option B: Via Streamlit Secrets (`.streamlit/secrets.toml`)
+```toml
+[snowflake]
+account = "xy12345.us-east-1"
+user = "ANALYTICS_USER"
+password = "my_secret_password"
+warehouse = "COMPUTE_WH"
+database = "ANALYTICS_DB"
+schema = "PUBLIC"
+```
+When configured in `secrets.toml`, your dashboard YAML only needs:
+```yaml
+data_source:
+  type: "snowflake"
+  query: "SELECT * FROM my_table"
+```
 
 ---
 

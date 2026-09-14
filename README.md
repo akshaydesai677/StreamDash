@@ -47,7 +47,14 @@ A modern, enterprise-grade multipage Streamlit platform for building, visualizin
    - Extensible data layer inheriting from `BaseDataAdapter`.
    - Built-in caching (`st.cache_data`), date parsing, and dynamic in-memory filtering.
 
-6. **Authentication & RBAC (`core/auth.py`, `config/access_control.yml`)**:
+6. **Snowflake Data Adapter (`adapters/snowflake_adapter.py`)**:
+   - Cloud data warehouse adapter using `snowflake-connector-python`.
+   - Supports direct SQL queries or table bindings, configurable row limits, and date parsing.
+   - Built-in intelligent credential resolution: YAML config, Streamlit secrets (`st.secrets["snowflake"]`), or environment variables.
+   - In-memory Streamlit caching (`@st.cache_data(ttl=600)`) prevents redundant cloud warehouse roundtrips.
+   - Mock/sandbox mode for testing without live Snowflake credentials (`mock: true`).
+
+7. **Authentication & RBAC (`core/auth.py`, `config/access_control.yml`)**:
    - Credentials login protecting all application views.
    - Role-based permissions controlling dashboard access for `admin`, `analyst`, and `viewer`.
    - Default credentials:
@@ -55,11 +62,11 @@ A modern, enterprise-grade multipage Streamlit platform for building, visualizin
      - **Analyst**: `analyst` / `analyst123` (Access to Sales & Operations, visual builder)
      - **Viewer**: `viewer` / `viewer123` (Read-only access to Sales Overview)
 
-7. **Interactive YAML Playground (`views/playground.py`)**:
+8. **Interactive YAML Playground (`views/playground.py`)**:
    - Live code editor with real-time YAML syntax & schema validation.
    - One-click template loader, embedded dataset inspector, and live side-by-side preview.
 
-8. **Dashboard Gallery Portal (`views/home.py`)**:
+9. **Dashboard Gallery Portal (`views/home.py`)**:
    - Homepage presenting window preview cards for authorized dashboards.
    - Live search bar and category filtering.
 

@@ -1,0 +1,84 @@
+id: "snowflake_analytics"
+title: "Snowflake Enterprise Analytics"
+description: "Live warehouse metrics, revenue trends, and cloud data distribution powered by Snowflake."
+category: "Cloud Data Warehouse"
+icon: "❄️"
+sort_order: 4
+roles:
+  - "admin"
+  - "analyst"
+
+# Snowflake Data Adapter Configuration
+data_source:
+  type: "snowflake"
+  account: "${SNOWFLAKE_ACCOUNT}"
+  user: "${SNOWFLAKE_USER}"
+  password: "${SNOWFLAKE_PASSWORD}"
+  warehouse: "COMPUTE_WH"
+  database: "ANALYTICS_DB"
+  schema: "PUBLIC"
+  role: "ANALYST_ROLE"
+  query: "SELECT ID, REGION, CATEGORY, REVENUE, TRANSACTION_DATE FROM SALES_ANALYTICS"
+  date_columns:
+    - "TRANSACTION_DATE"
+  cache_ttl: 600
+  # Set mock: true for sandbox testing without live credentials; set to false when connecting to live warehouse
+  mock: true
+
+filters:
+  - id: "region_filter"
+    column: "REGION"
+    type: "multiselect"
+    label: "Filter Region"
+    default: []
+  - id: "category_filter"
+    column: "CATEGORY"
+    type: "selectbox"
+    label: "Product Category"
+    include_all: true
+
+metrics:
+  - label: "Total Cloud Revenue"
+    column: "REVENUE"
+    agg: "sum"
+    format: "currency"
+    help: "Total closed revenue queried from Snowflake warehouse"
+  - label: "Average Deal Size"
+    column: "REVENUE"
+    agg: "mean"
+    format: "currency"
+    help: "Average order revenue"
+  - label: "Transaction Volume"
+    column: "ID"
+    agg: "count"
+    format: "integer"
+    help: "Total transactions executed"
+
+charts:
+  - id: "chart_revenue_by_region"
+    title: "Revenue by Territory"
+    type: "bar"
+    x: "REGION"
+    y: "REVENUE"
+    agg: "sum"
+    color: "CATEGORY"
+    barmode: "group"
+    col_width: 7
+
+  - id: "chart_category_share"
+    title: "Category Share of Revenue"
+    type: "pie"
+    values: "REVENUE"
+    names: "CATEGORY"
+    hole: 0.45
+    col_width: 5
+
+table:
+  show: true
+  title: "Snowflake Warehouse Query Results"
+  columns:
+    - "ID"
+    - "TRANSACTION_DATE"
+    - "REGION"
+    - "CATEGORY"
+    - "REVENUE"

@@ -5,10 +5,12 @@ import plotly.graph_objects as go
 import streamlit as st
 
 from adapters.csv_adapter import CSVDataAdapter
+from adapters.snowflake_adapter import SnowflakeDataAdapter
 
 # Adapter registry
 ADAPTER_MAP = {
     "csv": CSVDataAdapter,
+    "snowflake": SnowflakeDataAdapter,
 }
 
 PALETTES = {

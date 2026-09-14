@@ -1,6 +1,7 @@
 import os
 import sys
 import unittest
+import pandas as pd
 
 # Ensure Streamdash root is on path
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -224,6 +225,48 @@ class TestStreamdashCore(unittest.TestCase):
         pie_props = pie_cls.get_configurable_properties()
         pie_prop_names = [p["name"] for p in pie_props]
         self.assertIn("hole", pie_prop_names)
+
+    def test_13_snowflake_data_adapter(self):
+        from adapters.snowflake_adapter import SnowflakeDataAdapter
+        from core.renderer import get_data_adapter, DashboardRenderer
+
+        # 1. Test Registry lookup
+        adapter = get_data_adapter("snowflake")
+        self.assertIsInstance(adapter, SnowflakeDataAdapter)
+
+        # 2. Test Query builder
+        config_table = {"table": "ANALYTICS.SALES", "limit": 100}
+        q = adapter._build_query(config_table)
+        self.assertEqual(q, "SELECT * FROM ANALYTICS.SALES LIMIT 100")
+
+        config_custom_q = {"query": "SELECT ID, REVENUE FROM ORDERS"}
+        q2 = adapter._build_query(config_custom_q)
+        self.assertEqual(q2, "SELECT ID, REVENUE FROM ORDERS")
+
+        # 3. Test Mock / Sandbox data load
+        mock_config = {
+            "type": "snowflake",
+            "account": "test_account",
+            "mock": True,
+            "query": "SELECT * FROM SALES",
+            "date_columns": ["TRANSACTION_DATE"],
+        }
+        df = adapter.load_data(mock_config)
+        self.assertFalse(df.empty)
+        self.assertIn("REVENUE", df.columns)
+        self.assertIn("REGION", df.columns)
+        self.assertTrue(pd.api.types.is_datetime64_any_dtype(df["TRANSACTION_DATE"]))
+
+        # 4. Test column introspection
+        cols = adapter.get_columns(mock_config)
+        self.assertEqual(cols, ["ID", "REGION", "CATEGORY", "REVENUE", "TRANSACTION_DATE"])
+
+        # 5. Test Snowflake dashboard YAML rendering
+        dash_config = self.dashboard_loader.get_dashboard("snowflake_analytics")
+        self.assertIsNotNone(dash_config)
+        self.assertEqual(dash_config["data_source"]["type"], "snowflake")
+        renderer = DashboardRenderer(dash_config)
+        self.assertIsInstance(renderer.adapter, SnowflakeDataAdapter)
 
 
 if __name__ == "__main__":
